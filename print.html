@@ -1,0 +1,2421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript app construction</title>
+
+  <link rel="icon" type="image/x-icon" href="mc2/images/favicon.ico">
+
+  <link rel="stylesheet" href="mc2/styles/print.css">
+<link rel="stylesheet" href="mc2/styles/print-code.css">
+  
+</head>
+<body>
+
+<div id="bodycontainer">
+  <div id="frontpage">
+    <h1>JavaScript app construction</h1>
+    <div class="splash"><p>Learning the tools of the trade</p>
+</div>
+    <img class="logo" src="mc2/images/edument_logo_blue.svg">
+  </div>
+  <div id="footer">
+    <span id="delivery">Academy C#, nov 2017</span>
+    <span id="copyright">&copy; Edument 2017</span>
+  </div>
+  <div id="overview">
+    <h2>Course overview</h2>
+    <div class="overviewlist"><div class="detailedoverview"><div><h4><span>1.</span> Introduction</h4><ol><li>Your teacher</li><li>Course structure</li><li>The masterplan</li><li>The Web platform</li><li>Tools and resources</li></ol></div><div><h4><span>2.</span> JavaScript</h4><ol><li>JavaScript's character</li><li>JavaScript versions</li><li>Node and NPM</li><li>Exercise - Install Node</li><li>The build step</li><li>Objects</li><li>Arrays</li><li>Functions</li><li>Exercise - cooking time!</li><li>Functional programming</li><li>map, filter and reduce</li></ol></div></div><div><div><h4><span>3.</span> Getting started</h4><ol><li>CSS refresher</li><li>Exercise - static content</li><li>Git and Github</li><li>Exercise - set up repo</li><li>DOM nodes</li><li>Exercise - Data migration</li><li>DOM event refresher</li><li>Exercise - add user rating</li><li>jQuery refresher</li><li>Exercise - jQuerify</li></ol></div></div></div>
+  </div>
+  <div id="slides">
+    <div class="chaptercontainer">
+  <div class="chapterstart">
+    <span>chapter 1 / 3</span>
+    <h2>Introduction</h2>
+    <p>Setting the scene</p>
+</p>
+  </div>
+  <section class="slide">
+
+<div class="slidecontent"><p>JavaScript time! Woohoo! :)</p>
+</div></section>
+  <div class="chaptersectionlist">
+  <h3>Sections in this chapter:</h3>
+  <ul>
+    <li>1. Your teacher</li>
+<li>2. Course structure</li>
+<li>3. The masterplan</li>
+<li>4. The Web platform</li>
+<li>5. Tools and resources</li>
+  </ul>
+</div>
+
+  <div class="chaptersections">
+    <section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>1-1.</span> Your teacher</h3>
+      <p>The preacher</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="1-1-1">
+<span class="pos">1-1-1</span>
+<div class="slidecontent"><p>Let&#39;s <strong>start with the most important</strong> - me!</p>
+<p><img src="resources/diagrams/me.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-1-2">
+<span class="pos">1-1-2</span>
+<div class="slidecontent"><p>Contact information: </p>
+<ul>
+<li><strong>Email</strong>: <a href="mailto:david.waller@edument.se">david.waller@edument.se</a></li>
+<li><strong>Blog</strong>: <a href="http://blog.krawaller.se">http://blog.krawaller.se</a></li>
+<li><strong>Twitter</strong>: <a href="http://twitter.com/krawaller">krawaller</a></li>
+<li><strong>Phone</strong>: 0708-293094</li>
+</ul>
+<p>Don&#39;t be a stranger!</p>
+</div></section>
+<section class="slide" data-pos="1-1-3">
+<span class="pos">1-1-3</span>
+<div class="slidecontent"><p>But, <strong>fair warning</strong> - I spend my days singing this gospel:</p>
+<div class="equality">
+  <img src="resources/images/js-logo.png" alt="js">
+  <span>=</span>
+  <img src="resources/images/heart.png" alt="heart">
+</div></div></section>
+<section class="slide" data-pos="1-1-4">
+<span class="pos">1-1-4</span>
+<div class="slidecontent"><p>Now for what&#39;s actually most important - <strong>you</strong>! :)</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>1-2.</span> Course structure</h3>
+      <p>How we&#39;ll go about things</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="1-2-1">
+<span class="pos">1-2-1</span>
+<div class="slidecontent"><p>The course is divided into several <strong>chapters</strong>, where you&#39;re currently in the first.</p>
+<p><img src="resources/diagrams/course-structure.svg" alt="index and chapters"></p>
+<p>We access the chapters from an <strong>index</strong>, giving you a <strong>birds-eye view</strong> of the entire contents.</p>
+</div></section>
+<section class="slide" data-pos="1-2-2">
+<span class="pos">1-2-2</span>
+<div class="slidecontent"><p>Each <strong>chapter</strong> has many <strong>sections</strong>:</p>
+<p><img src="resources/diagrams/course-structure-chapter.svg" alt="index and chapters"></p>
+</div></section>
+<section class="slide" data-pos="1-2-3">
+<span class="pos">1-2-3</span>
+<div class="slidecontent"><p>In the <strong>PDF</strong> and in the <strong>presentation top-right corner</strong>, the slides are numbered <strong><code>X‑Y‑Z</code></strong> where...</p>
+<ul>
+<li><code>X</code> is the number of the current <strong>chapter</strong></li>
+<li><code>Y</code> is the number of the section <strong>section</strong> within that chapter</li>
+<li><code>Z</code> is the number of the <strong>slide</strong> within that section</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="1-2-4">
+<span class="pos">1-2-4</span>
+<div class="slidecontent"><p>Some sections are <strong>exercises</strong>, where you&#39;ll get to internalise what we&#39;ve been talking about through a 
+<strong>practical task</strong>.</p>
+<p>Because <strong>accelerated learning</strong> and all that.</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>1-3.</span> The masterplan</h3>
+      <p>tajmad och klar <span style='text-decoration: line-through;'>in i minsta detalj</span></p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="1-3-1">
+<span class="pos">1-3-1</span>
+<div class="slidecontent"><p>So - for the next 3 days, we&#39;ll talk about</p>
+<ul>
+<li><strong>AngularJS</strong> (at least that&#39;s what I&#39;ve told the bosses)</li>
+<li>...but we&#39;ll splice in some <strong>general JS fu</strong>...</li>
+<li>...including the <strong>build step</strong>,</li>
+<li>...some <strong>ReactJS</strong>,</li>
+<li>...and <strong>TypeScript</strong></li>
+</ul>
+</div></section>
+<section class="slide" data-pos="1-3-2">
+<span class="pos">1-3-2</span>
+<div class="slidecontent"><p>My <strong>unofficial goal</strong> is that you should be able to <strong>chat up a web developer in a bar</strong>.</p>
+<p>...or <strong>survive an interview without faux pas</strong>, whichever you find more interesting.</p>
+</div></section>
+<section class="slide" data-pos="1-3-3">
+<span class="pos">1-3-3</span>
+<div class="slidecontent"><ul>
+<li>It is <strong>forbidden to keep a question to yourself</strong>. Ask away! Because,</li>
+<li><strong>there are no stupid questions</strong>. <span style='text-decoration: line-through;'>Only stupid people.</span></li>
+</ul>
+</div></section>
+<section class="slide" data-pos="1-3-4">
+<span class="pos">1-3-4</span>
+<div class="slidecontent"><p>These slides are available at <a href="http://blog.krawaller.se/academy-c-sharp-slides/">http://blog.krawaller.se/academy-c-sharp-slides/</a></p>
+<p>Or put a <code>print.html</code> at the end of the above for a <strong>print-friendly version</strong>.</p>
+<p>I&#39;ll be <strong>updating these slides</strong> during these 3 days.</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>1-4.</span> The Web platform</h3>
+      <p>a.k.a. the holy trinity</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="1-4-1">
+<span class="pos">1-4-1</span>
+<div class="slidecontent"><p>The <strong>Web platform</strong> is really the combination of three separate technologies:</p>
+<p><img src="resources/diagrams/platform.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-4-2">
+<span class="pos">1-4-2</span>
+<div class="slidecontent"><p>(There was also a dark time when <strong>Java applets</strong> were used in webpages, but we don&#39;t talk about that...)</p>
+<p><img src="resources/diagrams/platform-java.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-4-3">
+<span class="pos">1-4-3</span>
+<div class="slidecontent"><p>(And we don&#39;t acknowledge the existence of <strong>flash</strong> either)</p>
+<p><img src="resources/diagrams/platform-flash.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-4-4">
+<span class="pos">1-4-4</span>
+<div class="slidecontent"><p>Traditionally, <strong>web apps looked like this</strong>:</p>
+<p><img src="resources/diagrams/webapp-before.svg" alt=""></p>
+<p>Web tech was <strong>just the UI</strong>. The real coding was done in <code>php</code> / <code>ruby</code> / <code>java</code> / <code>.NET</code>.</p>
+</div></section>
+<section class="slide" data-pos="1-4-5">
+<span class="pos">1-4-5</span>
+<div class="slidecontent"><p>But a <strong>modern SPA</strong> (Single Page Application) is more like this:</p>
+<p><img src="resources/diagrams/webapp-now.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-4-6">
+<span class="pos">1-4-6</span>
+<div class="slidecontent"><p>Additionally, web tech has <strong>escaped from the browser</strong>:</p>
+<p><img src="resources/diagrams/webapp-deploy.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-4-7">
+<span class="pos">1-4-7</span>
+<div class="slidecontent"><p>And blurring the lines even further - there are framework to <strong>compile web to native code</strong>:</p>
+<p><img src="resources/diagrams/webapp-deploy-compile.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-4-8">
+<span class="pos">1-4-8</span>
+<div class="slidecontent"><p>In essence: <strong>web tech is on the (high) rise</strong>, and even if you intend to stay in a sheltered C# garden, knowledge about the web platform will serve you well.</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>1-5.</span> Tools and resources</h3>
+      <p>Gear up!</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="1-5-1">
+<span class="pos">1-5-1</span>
+<div class="slidecontent"><p>On this journey, our primary tool is <strong>a browser</strong>. I primarily use Chrome, but any modern browser will do.</p>
+<p>This is not just for consuming web content - the <strong>developer tools</strong> inside the browser is an integral part of our setup. Consider it part of our IDE without the I!</p>
+</div></section>
+<section class="slide" data-pos="1-5-2">
+<span class="pos">1-5-2</span>
+<div class="slidecontent"><p>Another very useful function in the browser is to be able to <strong>view source</strong>. All web apps transmit their entire source code to the browser, so snoop away!</p>
+<p><img src="resources/images/viewsource.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-5-3">
+<span class="pos">1-5-3</span>
+<div class="slidecontent"><p>We also need an <strong>editor</strong>. As HTML, CSS and JavaScript isn&#39;t (necessarily) compiled, any text editor can be used, but preferrably one with <strong>good web tooling</strong>.</p>
+<p>Why not <strong>VSC</strong>?</p>
+</div></section>
+<section class="slide" data-pos="1-5-4">
+<span class="pos">1-5-4</span>
+<div class="slidecontent"><p>There is an <strong>ongoing religious war</strong> between whether <strong>IDE:s or editors</strong> are the optimum. You don&#39;t have to take sides (although as VC slaves you likely already have), but it is good to understand the problem to be able to form an opinion.</p>
+<p><img src="resources/diagrams/idewars.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="1-5-5">
+<span class="pos">1-5-5</span>
+<div class="slidecontent"><p>You&#39;ll need to install <strong><a href="https://nodejs.org/en/">NodeJS</a></strong>, if you haven&#39;t already done so.</p>
+<p>Instructions will follow later, so hold on for now!</p>
+</div></section>
+<section class="slide" data-pos="1-5-6">
+<span class="pos">1-5-6</span>
+<div class="slidecontent"><p>Later on we might need a <strong>web server</strong>, and a local installation of <strong><a href="https://www.python.org/downloads/">Python</a></strong> is a supremely convenient way of accomplishing this.</p>
+</div></section>
+<section class="slide" data-pos="1-5-7">
+<span class="pos">1-5-7</span>
+<div class="slidecontent"><p>Just navigate to your main projects folder in a terminal and type:</p>
+<ul>
+<li><code>python -m http.server</code> for Python 3</li>
+<li><code>python -m SimpleHTTPServer</code> for python 2</li>
+</ul>
+<p>...and voila, all your projects are published at <code>http://localhost:8000</code>!</p>
+<p>But, we&#39;ll get to this too down the road.</p>
+</div></section>
+<section class="slide" data-pos="1-5-8">
+<span class="pos">1-5-8</span>
+<div class="slidecontent"><p>Finally you need a <strong>good resources</strong> for looking up specifics. I recommend Mozilla Developer Network, or <strong>MDN</strong> for short.</p>
+<p><img src="resources/images/mdn.png" alt=""></p>
+<p>Find it at <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.</p>
+</div></section>
+<section class="slide" data-pos="1-5-9">
+<span class="pos">1-5-9</span>
+<div class="slidecontent"><p>I do <strong>NOT recomment W3Schools</strong>, who will be at the top of every googling. They are good at SEO, not explanations and documentations.</p>
+<p>I suggest either</p>
+<ul>
+<li><strong>blocking them from google results</strong>, or </li>
+<li><strong>prefixing your queries with MDN</strong></li>
+</ul>
+</div></section>
+<section class="slide" data-pos="1-5-10">
+<span class="pos">1-5-10</span>
+<div class="slidecontent"><p>Whichever resource you use, it is important to <strong>have somewhere within reach to go for details</strong>. </p>
+<p>Therefore, choose a resource and <strong>invest time in getting to know it</strong> and know it well, so that future lookups go quick.</p>
+</div></section>
+</section>
+
+  </div>
+  
+</div>
+<div class="chaptercontainer">
+  <div class="chapterstart">
+    <span>chapter 2 / 3</span>
+    <h2>JavaScript</h2>
+    <p>Lingua franca of the web</p>
+</p>
+  </div>
+  
+  <div class="chaptersectionlist">
+  <h3>Sections in this chapter:</h3>
+  <ul>
+    <li>1. JavaScript's character</li>
+<li>2. JavaScript versions</li>
+<li>3. Node and NPM</li>
+<li>4. Exercise - Install Node</li>
+<li>5. The build step</li>
+<li>6. Objects</li>
+<li>7. Arrays</li>
+<li>8. Functions</li>
+<li>9. Exercise - cooking time!</li>
+<li>10. Functional programming</li>
+<li>11. map, filter and reduce</li>
+  </ul>
+</div>
+
+  <div class="chaptersections">
+    <section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-1.</span> JavaScript's character</h3>
+      <p>Know thy enemy</p>
+</p>
+    </div>
+  </section>
+  <section class="slide list" data-pos="2-1-1">
+<span class="pos">2-1-1</span>
+<div class="slidecontent">
+<p>So - <strong>JavaScript</strong>! It is a different beast in many ways:</p>
+<ul>
+<li><span>a</span>loose typing</li>
+<li><span>b</span>functional focus</li>
+<li><span>c</span>prototypal &quot;inheritance&quot;</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="2-1-2">
+<span class="pos">2-1-2</span>
+<div class="slidecontent">
+<p>At its core, loose typing means the following <strong>deal with the devil</strong>: </p>
+<p>We get <strong>extreme power and <a href="http://js1k.com/">flexibility</a></strong>, at the cost of <strong>tooling</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-1-3">
+<span class="pos">2-1-3</span>
+<div class="slidecontent"><p>Although, with <a href="https://www.typescriptlang.org/">TypeScript</a> we can cheat the devil!</p>
+</div></section>
+<section class="slide num numB" data-pos="2-1-4">
+<span class="pos">2-1-4</span>
+<div class="slidecontent">
+<p>Functions are first class citizens in JavaScript, meaning they&#39;re a <strong>value like any other</strong>.</p>
+<p>This means it lends itself to <strong>functional programming techniques</strong>, which are growing evermore popular. We&#39;ll come back to those!</p>
+</div></section>
+<section class="slide num numC" data-pos="2-1-5">
+<span class="pos">2-1-5</span>
+<div class="slidecontent">
+<p>Being stuck in an OOP mindframe, we think a lot about <strong>inheritance</strong>. JavaScript has inheritance of sorts, but <strong>between &quot;instances&quot;</strong>.</p>
+<p>But - in JavaScript, <strong>inheritance doesn&#39;t matter much</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-1-6">
+<span class="pos">2-1-6</span>
+<div class="slidecontent"><p>By the way - are you familiar with the <strong>3 levels of programming</strong>?</p>
+<p><img src="resources/diagrams/programmerlevels.svg" alt=""></p>
+</div></section>
+<section class="slide question" data-pos="2-1-7">
+<span class="pos">2-1-7</span>
+<div class="slidecontent">
+<p>They were interesting, but <strong>what do they have to do with JavaScript</strong>?</p>
+</div></section>
+<section class="slide answer" data-pos="2-1-8">
+<span class="pos">2-1-8</span>
+<div class="slidecontent">
+<p>JavaScript&#39;s flexible nature <strong>encourages and empowers level 2 behaviour</strong>.</p>
+<p>So <strong>take good care</strong>, and remember:</p>
+<blockquote>
+<p>With great power comes great responsibility</p>
+</blockquote>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-2.</span> JavaScript versions</h3>
+      <p>lingua franca of the web</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="2-2-1">
+<span class="pos">2-2-1</span>
+<div class="slidecontent"><p>Here is an overview of the <strong>different JavaScript versions</strong>:</p>
+<p><img src="resources/diagrams/js-versions.svg" alt="versions"></p>
+</div></section>
+<section class="slide question" data-pos="2-2-2">
+<span class="pos">2-2-2</span>
+<div class="slidecontent">
+<p>So, just <strong>how small is ES7</strong> actually? Err, I mean <strong>ES2015</strong>.</p>
+</div></section>
+<section class="slide answer" data-pos="2-2-3">
+<span class="pos">2-2-3</span>
+<div class="slidecontent">
+<p>Well, if you go to <a href="https://getgood.at/js/es7-in-7-days">https://getgood.at/js/es7-in-7-days</a>...</p>
+<p><img src="resources/images/es7in7days.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-2-4">
+<span class="pos">2-2-4</span>
+<div class="slidecontent"><p>...then you have <strong>3.5 days to learn this</strong>:</p>
+<pre><code class="lang-javascript">myArr.includes(<span class="hljs-string">'foo'</span>) <span class="hljs-comment">// returns true or false</span>
+</code></pre>
+<p>...and <strong>3.5 days to learn this</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-number">5</span> ** <span class="hljs-number">3</span> <span class="hljs-comment">// 125, same as Math.pow(5, 3)</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-2-5">
+<span class="pos">2-2-5</span>
+<div class="slidecontent"><p>After ES6 (ES2015), TC39 switched to a <strong>yearly release cycle</strong> where <strong>features compete individually</strong>.</p>
+<p><img src="resources/images/gauntlet.jpg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-2-6">
+<span class="pos">2-2-6</span>
+<div class="slidecontent"><p>The <strong>TC39 process</strong>:</p>
+<p><img src="resources/diagrams/tc39process.svg" alt="versions"></p>
+<p>Formal description <a href="https://tc39.github.io/process-document/">here</a></p>
+</div></section>
+<section class="slide" data-pos="2-2-7">
+<span class="pos">2-2-7</span>
+<div class="slidecontent"><p>So <strong>what&#39;s in the pipe</strong>?</p>
+<ul>
+<li><a href="https://github.com/tc39/proposals/blob/master/finished-proposals.md">Stage 0 list</a> (16)</li>
+<li><a href="https://github.com/tc39/proposals">Stage 1-3</a> (17, 9, 10)</li>
+<li><a href="https://github.com/tc39/proposals/blob/master/finished-proposals.md">Stage 4</a> (7, not counting ES2016)</li>
+</ul>
+<p>(counts valid as of April 24th)</p>
+</div></section>
+<section class="slide" data-pos="2-2-8">
+<span class="pos">2-2-8</span>
+<div class="slidecontent"><p>Curious what a <strong>finished feature spec</strong> looks like?</p>
+<p>Let&#39;s check out the spec for Exponentiation](<a href="http://rwaldron.github.io/exponentiation-operator/">http://rwaldron.github.io/exponentiation-operator/</a>)</p>
+</div></section>
+<section class="slide" data-pos="2-2-9">
+<span class="pos">2-2-9</span>
+<div class="slidecontent"><p>A <strong>recommended learning resource</strong> if you want to become a nerd are these books by Alex Rauschmayer:</p>
+<ul>
+<li><a href="https://leanpub.com/exploring-es6">Exploring ES6</a></li>
+<li><a href="https://leanpub.com/exploring-es2016-es2017">Exploring ES2016 and ES2017</a></li>
+</ul>
+<p>Both are <strong>free online</strong>. And I&#39;ve brought paper copies for you to peruse!</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-3.</span> Node and NPM</h3>
+      <p>workbench and pantry</p>
+</p>
+    </div>
+  </section>
+  <section class="slide list" data-pos="2-3-1">
+<span class="pos">2-3-1</span>
+<div class="slidecontent">
+<p>In the course we&#39;ll rely heavily on</p>
+<ul>
+<li><span>a</span>the <strong>JavaScript runtime Node</strong> and </li>
+<li><span>b</span>the <strong>package manager npm</strong></li>
+</ul>
+<p>...so let&#39;s touch briefly on both!</p>
+</div></section>
+<section class="slide num numA" data-pos="2-3-2">
+<span class="pos">2-3-2</span>
+<div class="slidecontent">
+<p><a href="https://nodejs.org/en/">Node</a> is mostly associated with <strong>running JavaScript on the server</strong>, but in actuality it is a <strong>JavaScript runtime that can be run anywhere</strong>. Some <strong>differences versus the in-browser runtime</strong> is that</p>
+<ul>
+<li>Node has <strong>no DOM</strong></li>
+<li>Node can <strong>read and write files</strong></li>
+<li>Node has <strong>its own module system</strong></li>
+</ul>
+</div></section>
+<section class="slide" data-pos="2-3-3">
+<span class="pos">2-3-3</span>
+<div class="slidecontent"><p>There are <strong>two ways to execute JS</strong> with Node. We can enter the <strong>REPL</strong> by typing <code>node</code> in a node terminal...</p>
+<p><img src="resources/images/noderepl.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-3-4">
+<span class="pos">2-3-4</span>
+<div class="slidecontent"><p>...or we can <strong>execute JavaScript files</strong> by typing <code>node myfile.js</code> which executes the JS code in <code>myfile.js</code>.</p>
+<p>This of course is the <strong>most common usage</strong> of Node.</p>
+<p>JS developers frequently use Node to <strong>run code as part of their build chain</strong>.</p>
+</div></section>
+<section class="slide num numB" data-pos="2-3-5">
+<span class="pos">2-3-5</span>
+<div class="slidecontent">
+<p>However, Node is also used for <strong>running <code>npm</code></strong>, through which we can <strong>download packages from the online repository</strong> at <a href="https://www.npmjs.com/">https://www.npmjs.com/</a>.</p>
+</div></section>
+<section class="slide" data-pos="2-3-6">
+<span class="pos">2-3-6</span>
+<div class="slidecontent"><p>Allegedly npm is an <strong>acronym for Node Package Manager</strong>, but <strong>npm themselves deny that</strong> through <strong>consistently using lower-case characters</strong>, and through the <strong>top-left corner of their homepage</strong>: </p>
+<p><img src="resources/images/npmmeaning.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-3-7">
+<span class="pos">2-3-7</span>
+<div class="slidecontent"><p>We download packages by</p>
+<ul>
+<li><strong>turning our own code into a package</strong> through adding a <strong><code>package.json</code> file</strong></li>
+<li><strong>listing the packages we depend on</strong> in that file</li>
+<li>typing <code>npm install</code> to <strong>download all listed dependencies</strong> to <code>node_modules</code></li>
+<li><strong>using those modules</strong> in our code!</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="2-3-8">
+<span class="pos">2-3-8</span>
+<div class="slidecontent"><p>By having <strong><code>package.json</code> as part of the project</strong>, but <strong>excluding <code>node_modules</code></strong>, we get a <strong>small code repository</strong> which can still be <strong>easily inflated with dependencies</strong>.</p>
+<p>And we can still be sure that <strong>everyone has the same dependcies</strong>.</p>
+<p>(...at least if we&#39;re careful...)</p>
+</div></section>
+<section class="slide" data-pos="2-3-9">
+<span class="pos">2-3-9</span>
+<div class="slidecontent"><p>A <strong>downloaded published module</strong> will normally <strong>look like this</strong>:</p>
+<p><img src="resources/diagrams/modulecontent.svg" alt=""></p>
+<p>The <code>package.json</code> file will specify <strong>where in the source the entry point is</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-3-10">
+<span class="pos">2-3-10</span>
+<div class="slidecontent"><p>So! <strong>Node&#39;s module system</strong> that we mentioned earlier lets us</p>
+<ul>
+<li><strong>import stuff from other files</strong> by using <code>require</code></li>
+<li><strong>export stuff from files</strong> by assigning to <code>module.exports</code></li>
+</ul>
+</div></section>
+<section class="slide" data-pos="2-3-11">
+<span class="pos">2-3-11</span>
+<div class="slidecontent"><p>But <strong>now for the beautiful part</strong> - we can <strong>also require packages</strong> from <code>node_modules</code>!</p>
+<p>Thus Node and npm together solve both the <strong>code modularisation problem</strong> along with <strong>3rd party code import problem</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-3-12">
+<span class="pos">2-3-12</span>
+<div class="slidecontent"><p>Here&#39;s the <strong>full truth</strong> about <strong>how we require stuff</strong>:</p>
+<p><img src="resources/diagrams/loadmodule.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-3-13">
+<span class="pos">2-3-13</span>
+<div class="slidecontent"><p>The important part is to realise that there is <strong>no magic involved</strong>, and that Node provides us with a <strong>convenient way to load</strong>...</p>
+<ul>
+<li><strong>core modules</strong> (like <code>fs</code>, <code>http</code>, etc)</li>
+<li><strong>3rd party code</strong> (like <code>angular</code>)</li>
+<li><strong>own local modules</strong> (like <code>./src/mycomponent</code>)</li>
+</ul>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-4.</span> Exercise - Install Node</h3>
+      
+    </div>
+  </section>
+  <section class="slide" data-pos="2-4-1">
+<span class="pos">2-4-1</span>
+<div class="slidecontent"><div class="goal"></div>
+
+<p>Goal: Have NodeJS installed locally on your machine</p>
+</div></section>
+<section class="slide" data-pos="2-4-2">
+<span class="pos">2-4-2</span>
+<div class="slidecontent"><p>Goto <a href="https://nodejs.org/">https://nodejs.org/</a></p>
+<p>Download the &quot;Current Version&quot;</p>
+<p><img src="resources/images/node_download.png" alt="Node Picture"></p>
+</div></section>
+<section class="slide" data-pos="2-4-3">
+<span class="pos">2-4-3</span>
+<div class="slidecontent"><p>Click through the installer.</p>
+</div></section>
+<section class="slide" data-pos="2-4-4">
+<span class="pos">2-4-4</span>
+<div class="slidecontent"><p>You&#39;ll see that node has installed a few things in the start menu:</p>
+<p><img src="resources/images/node_start.png" alt="node-start"></p>
+</div></section>
+<section class="slide" data-pos="2-4-5">
+<span class="pos">2-4-5</span>
+<div class="slidecontent"><p>All of these are a bit useless, just use node and npm directly.</p>
+<p><img src="resources/images/node_bash.png" alt="node-git-bash"></p>
+</div></section>
+<section class="slide" data-pos="2-4-6">
+<span class="pos">2-4-6</span>
+<div class="slidecontent"><div class="checklist"></div>
+
+<p>You are done when...</p>
+<ul>
+<li>typing <code>node -v</code> in any terminal works</li>
+</ul>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-5.</span> The build step</h3>
+      <p>modern armoury</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="2-5-1">
+<span class="pos">2-5-1</span>
+<div class="slidecontent"><p>In modern JS developemt we frequently use a <strong>build step</strong>:</p>
+<p><img src="resources/diagrams/buildstep.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-5-2">
+<span class="pos">2-5-2</span>
+<div class="slidecontent"><p>This takes care of...</p>
+<ul>
+<li><strong>bundling</strong> the code into a single file</li>
+<li><strong>transpiling</strong> to lower JS versions</li>
+<li><strong>other stuff</strong> such as minification, tree shaking, etc</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="2-5-3">
+<span class="pos">2-5-3</span>
+<div class="slidecontent"><p>The most common build step tools are <a href="https://webpack.github.io/">Webpack</a> and <a href="http://browserify.org/">Browserify</a>.</p>
+<p>You&#39;ll also hear about people placing configuration in <a href="https://gruntjs.com/">Grunt</a> or <a href="http://gulpjs.com/">Gulp</a>, but the cool kids use npm scripts instead.</p>
+<p>We&#39;ll talk more about the build step shortly!</p>
+</div></section>
+<section class="slide" data-pos="2-5-4">
+<span class="pos">2-5-4</span>
+<div class="slidecontent"><p>For transpiling, the most common solution is <strong><a href="https://babeljs.io/">Babel</a></strong>:</p>
+<div style="display:inline-block;width:550px;">
+<img src="resources/images/babel.png" alt="">
+</div></div></section>
+<section class="slide" data-pos="2-5-5">
+<span class="pos">2-5-5</span>
+<div class="slidecontent"><p>By default Babel does nothing, we must <strong>configure</strong> it:</p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-string">"presets"</span>: [
+    <span class="hljs-string">"es2015"</span>,
+    <span class="hljs-string">"es2016"</span>,
+    <span class="hljs-string">"stage-0"</span>,
+    <span class="hljs-string">"react"</span>
+  ],
+  <span class="hljs-string">"plugins"</span>: [
+    <span class="hljs-string">"transform-regenerator"</span>,
+    <span class="hljs-string">"transform-decorators-legacy"</span>
+  ]
+}
+</code></pre>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-6.</span> Objects</h3>
+      <p>bags of data</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="2-6-1">
+<span class="pos">2-6-1</span>
+<div class="slidecontent"><p>This section is <strong>an overview of objects</strong>, in case you need a refresher!</p>
+</div></section>
+<section class="slide" data-pos="2-6-2">
+<span class="pos">2-6-2</span>
+<div class="slidecontent"><p>JavaScript has two <strong>composite data types</strong>, namely <strong>objects</strong> and <strong>arrays</strong>!</p>
+<p>Althought technically <strong>arrays are a special kind of objects</strong>, but, never mind.</p>
+</div></section>
+<section class="slide" data-pos="2-6-3">
+<span class="pos">2-6-3</span>
+<div class="slidecontent"><p>An object in JavaScript is a <strong>collection of key-value pairs</strong>, often called a <strong>dictionary</strong> in other languages. </p>
+<p>The <strong>property names (keys) are always strings</strong>, and the <strong>property values can be anything</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-6-4">
+<span class="pos">2-6-4</span>
+<div class="slidecontent"><p>We can <strong>create an object literal</strong> like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> myObject = {
+  <span class="hljs-attr">someProp</span>: <span class="hljs-number">42</span>,
+  <span class="hljs-attr">anotherProp</span>: <span class="hljs-string">"hello!"</span>
+};
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-5">
+<span class="pos">2-6-5</span>
+<div class="slidecontent"><p>There are <strong>two different ways to access a value</strong>.</p>
+<p>We can use <strong>dot notation</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = myObject.someProp; <span class="hljs-comment">// 42</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-6">
+<span class="pos">2-6-6</span>
+<div class="slidecontent"><p>Or we can use <strong>bracket notation</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> y = myObject[<span class="hljs-string">"someProp"</span>]; <span class="hljs-comment">// 42</span>
+</code></pre>
+</div></section>
+<section class="slide question" data-pos="2-6-7">
+<span class="pos">2-6-7</span>
+<div class="slidecontent"><p><strong>Question</strong>: The <strong>dot notation seems much smoother</strong>, so <strong>why would we ever want bracket notation</strong>?</p>
+</div></section>
+<section class="slide answer" data-pos="2-6-8">
+<span class="pos">2-6-8</span>
+<div class="slidecontent"><p><strong>Answer</strong>: That allows us to do <strong>dynamic lookups</strong>:</p>
+<pre><code><span class="hljs-keyword">let</span> <span class="hljs-attr">propName</span> = <span class="hljs-string">"someProp"</span>;
+<span class="hljs-keyword">let</span> <span class="hljs-attr">z</span> = myObject[propName]; // <span class="hljs-number">42</span>
+</code></pre></div></section>
+<section class="slide" data-pos="2-6-9">
+<span class="pos">2-6-9</span>
+<div class="slidecontent"><p>We <strong>add a property simply by assigning to it</strong>:</p>
+<pre><code class="lang-javaScript"><span class="hljs-keyword">let</span> myObject.newProp = <span class="hljs-number">777</span>;
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-10">
+<span class="pos">2-6-10</span>
+<div class="slidecontent"><p>And we <strong>delete a property</strong> using the <code>delete</code> keyword:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">delete</span> myObject.newProp;
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-11">
+<span class="pos">2-6-11</span>
+<div class="slidecontent"><p>If we <strong>access a non-existing property</strong> we always get <code>undefined</code>.</p>
+<pre><code class="lang-javascript">myObject.bogusProp; <span class="hljs-comment">// undefined</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-12">
+<span class="pos">2-6-12</span>
+<div class="slidecontent"><p>Contrary to primitives, <strong>objects are references</strong>, which means that this is false since it is <strong>two different objects</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> test = ( {<span class="hljs-attr">a</span>:<span class="hljs-number">1</span>} === {<span class="hljs-attr">a</span>:<span class="hljs-number">1</span>} ); <span class="hljs-comment">// false</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-13">
+<span class="pos">2-6-13</span>
+<div class="slidecontent"><p>While this is true, since they <strong>point to the same object</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = {<span class="hljs-attr">a</span>:<span class="hljs-number">1</span>};
+<span class="hljs-keyword">let</span> y = x;
+<span class="hljs-keyword">let</span> test = x === y; <span class="hljs-comment">// true</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-14">
+<span class="pos">2-6-14</span>
+<div class="slidecontent"><p>Since <strong>objects are references</strong> they are <strong>always truthy</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> ({}){
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"An empty object is truthy!"</span>); <span class="hljs-comment">// will be shown!</span>
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-15">
+<span class="pos">2-6-15</span>
+<div class="slidecontent"><p>We can <strong>iterate over objects</strong> using a <strong><code>for-in</code> loop</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> myObject){
+  <span class="hljs-built_in">console</span>.log(key+<span class="hljs-string">" has value "</span>+myObject[key]);
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-16">
+<span class="pos">2-6-16</span>
+<div class="slidecontent"><p>Finally: <strong>object can contain other objects</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> me = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"David"</span>,
+  <span class="hljs-attr">address</span>: {
+    <span class="hljs-attr">street</span>: <span class="hljs-string">"Åsgatan 9"</span>,
+    <span class="hljs-attr">zip</span>: <span class="hljs-number">27131</span>,
+    <span class="hljs-attr">city</span>: <span class="hljs-string">"Ystad"</span>
+  }
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-6-17">
+<span class="pos">2-6-17</span>
+<div class="slidecontent"><p>We can <strong>access properties to any depth</strong>: </p>
+<pre><code><span class="hljs-attribute">let myZip</span> = me.address.zip;
+</code></pre><p>...although we might have to <strong>guard for undefineds</strong>:</p>
+<pre><code><span class="hljs-keyword">let</span> myZip = <span class="hljs-keyword">me</span>.address &amp;&amp; <span class="hljs-keyword">me</span>.address.zip;
+</code></pre></div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-7.</span> Arrays</h3>
+      <p>Ordered lists</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="2-7-1">
+<span class="pos">2-7-1</span>
+<div class="slidecontent"><p>This section is <strong>an overview of arrays</strong>, in case you need a refresher!</p>
+</div></section>
+<section class="slide" data-pos="2-7-2">
+<span class="pos">2-7-2</span>
+<div class="slidecontent"><p>A special kind of objects are <strong>arrays</strong>, which are an <strong>ordered list of values</strong>.</p>
+<p>You could say that they are <strong>objects where the keys are always named 0, 1, 2...</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-7-3">
+<span class="pos">2-7-3</span>
+<div class="slidecontent"><p>We can <strong>create arrays</strong> using the <strong>array literal notation</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> list = [<span class="hljs-string">"tomatoes"</span>,<span class="hljs-number">42</span>,<span class="hljs-literal">false</span>];
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-7-4">
+<span class="pos">2-7-4</span>
+<div class="slidecontent"><p>Since <strong>arrays are objects</strong> we <strong>access elements as before</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> firstItem = list[<span class="hljs-number">0</span>]; <span class="hljs-comment">// "tomatoes"</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-7-5">
+<span class="pos">2-7-5</span>
+<div class="slidecontent"><p>An array <strong>has a length property</strong> that tells us how many elements it contains:</p>
+<pre><code class="lang-javascript">list.length <span class="hljs-comment">// 3</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-7-6">
+<span class="pos">2-7-6</span>
+<div class="slidecontent"><p>Which means I can <strong>pick the last item</strong> by doing this:</p>
+<pre><code><span class="hljs-keyword">let</span> lastItem = <span class="hljs-keyword">list</span>[<span class="hljs-keyword">list</span>.length<span class="hljs-number">-1</span>]; // <span class="hljs-literal">false</span>
+</code></pre></div></section>
+<section class="slide" data-pos="2-7-7">
+<span class="pos">2-7-7</span>
+<div class="slidecontent"><p>We can <strong>add a new value</strong> by calling the <code>push</code> method:</p>
+<pre><code class="lang-javascript">list.push(<span class="hljs-string">"foobar"</span>);
+list.length <span class="hljs-comment">// 4</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-7-8">
+<span class="pos">2-7-8</span>
+<div class="slidecontent"><p>It is common to <strong>iterate using a regular for loop</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>; i &lt; list.length; i = i+<span class="hljs-number">1</span>){
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Item "</span>+i+<span class="hljs-string">" is "</span>+list[i]);
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-7-9">
+<span class="pos">2-7-9</span>
+<div class="slidecontent"><p>There are a <strong>whole bunch of array methods</strong> - see the MDN reference for a full list:</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a></p>
+</div></section>
+<section class="slide question" data-pos="2-7-10">
+<span class="pos">2-7-10</span>
+<div class="slidecontent"><p><strong>Question</strong>: The <code>length</code> property was rather convenient - is there something <strong>similar on regular objects</strong>?</p>
+</div></section>
+<section class="slide answer" data-pos="2-7-11">
+<span class="pos">2-7-11</span>
+<div class="slidecontent"><p><strong>Answer</strong>: Not directly, but we can get an <strong>array of all keys for an object</strong> using the <code>keys</code> method of the global <code>Object</code> object:</p>
+<pre><code><span class="hljs-keyword">let</span> <span class="hljs-attr">keys</span> = Object.keys(myObject); // [<span class="hljs-string">"someProp"</span>,<span class="hljs-string">"anotherProp"</span>]
+</code></pre></div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-8.</span> Functions</h3>
+      <p>code in a can</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="2-8-1">
+<span class="pos">2-8-1</span>
+<div class="slidecontent"><p>This section is <strong>an overview of functions</strong>, in case you need a refresher!</p>
+</div></section>
+<section class="slide" data-pos="2-8-2">
+<span class="pos">2-8-2</span>
+<div class="slidecontent"><p>There are <strong>two different ways to define a function</strong> in JavaScript. First as a <strong>named function</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">echoer</span>(<span class="hljs-params">word,times</span>)</span>{
+  <span class="hljs-keyword">let</span> echo = <span class="hljs-string">""</span>;
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; times; i = i + <span class="hljs-number">1</span>){
+    echo = echo + word;
+  }
+  <span class="hljs-keyword">return</span> echo;
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-8-3">
+<span class="pos">2-8-3</span>
+<div class="slidecontent"><p>Or as an <strong>anonymous function</strong> which we can assign to a variable:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> echoer = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">word,times</span>)</span>{
+  <span class="hljs-keyword">let</span> echo = <span class="hljs-string">""</span>;
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; times; i = i + <span class="hljs-number">1</span>){
+    echo = echo + word + <span class="hljs-string">" "</span>;
+  }
+  <span class="hljs-keyword">return</span> echo;
+}
+</code></pre>
+<p>Mostly it <strong>doesn&#39;t really matter</strong> which way you choose.</p>
+</div></section>
+<section class="slide" data-pos="2-8-4">
+<span class="pos">2-8-4</span>
+<div class="slidecontent"><p>As the example showed, we use <strong><code>return something</code></strong> to return a value. If you just do <code>return;</code>, the returned value is <code>undefined</code>, which it also is if you don&#39;t use <code>return</code> at all.</p>
+</div></section>
+<section class="slide" data-pos="2-8-5">
+<span class="pos">2-8-5</span>
+<div class="slidecontent"><p>We <strong>execute a function by using parens</strong>, and <strong>listing eventual parameters</strong> within those:</p>
+<pre><code><span class="hljs-keyword">let</span> <span class="hljs-attr">withEcho</span> = echoer(<span class="hljs-string">"hello"</span>,<span class="hljs-number">3</span>); // <span class="hljs-string">"hello hello hello "</span>
+</code></pre></div></section>
+<section class="slide question" data-pos="2-8-6">
+<span class="pos">2-8-6</span>
+<div class="slidecontent"><p><strong>Question</strong>: What is the <strong>difference</strong> between this:</p>
+<pre><code>let x = <span class="hljs-function"><span class="hljs-keyword">func</span>;</span>
+</code></pre><p>and <strong>this</strong>:</p>
+<pre><code><span class="hljs-keyword">let</span> x = <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span>;
+</code></pre></div></section>
+<section class="slide answer" data-pos="2-8-7">
+<span class="pos">2-8-7</span>
+<div class="slidecontent"><p><strong>Answer</strong>: Well:</p>
+<ul>
+<li><p>In the <strong>first example</strong>, <strong><code>x</code> has a reference to <code>func</code></strong>. Which means that after that, <strong>doing <code>x()</code> and <code>func()</code> would yield the same thing</strong>.</p>
+</li>
+<li><p>In the <strong>second example</strong>, <strong><code>x</code> is whatever <code>func</code> returned</strong>.</p>
+</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="2-8-8">
+<span class="pos">2-8-8</span>
+<div class="slidecontent"><p>A final observation - There is nothing stopping us from <strong>having functions on objects</strong>:</p>
+<pre><code>myObject.beingAnnoying = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"SPAM!"</span>);
+};
+myObject.beingAnnoying(); <span class="hljs-comment">// "SPAM!"</span>
+</code></pre><p>When a function is a property on an object it is called a <strong>method</strong> of that object.</p>
+</div></section>
+<section class="slide" data-pos="2-8-9">
+<span class="pos">2-8-9</span>
+<div class="slidecontent"><p>And to end on a meta note; there is also nothing stopping us from <strong>having objects (or anything else) on functions</strong>, since <strong>functions are objects</strong>.</p>
+<pre><code>let <span class="hljs-function"><span class="hljs-keyword">func</span> = <span class="hljs-title">function</span><span class="hljs-params">()</span>{};</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span>.<span class="hljs-title">prop</span> = {<span class="hljs-title">hello</span>:"<span class="hljs-title">world</span>!"};</span>
+console.<span class="hljs-built_in">log</span>(<span class="hljs-function"><span class="hljs-keyword">func</span>.<span class="hljs-title">prop</span>.<span class="hljs-title">hello</span>); // "<span class="hljs-title">world</span>!"</span>
+</code></pre></div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-9.</span> Exercise - cooking time!</h3>
+      <p>getting functional</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="2-9-1">
+<span class="pos">2-9-1</span>
+<div class="slidecontent"><div class="goal"></div>
+
+<p>Goal: Freshen up our JS skills</p>
+</div></section>
+<section class="slide" data-pos="2-9-2">
+<span class="pos">2-9-2</span>
+<div class="slidecontent"><p>Let&#39;s have an initial exercise to gauge your JS fu.</p>
+<p>We&#39;ll throw <strong>objects</strong>, <strong>arrays</strong> and <strong>functions</strong> into the mixer and see what happens!</p>
+</div></section>
+<section class="slide" data-pos="2-9-3">
+<span class="pos">2-9-3</span>
+<div class="slidecontent"><p>We&#39;ll <strong>use Node</strong> for this exercise, and play around with <strong>a single <code>shop.js</code> file</strong>.</p>
+<p><strong>Create that file</strong> in a folder somewhere, and <strong>navigate to it in a terminal</strong>!</p>
+</div></section>
+<section class="slide" data-pos="2-9-4">
+<span class="pos">2-9-4</span>
+<div class="slidecontent"><p>In that file, <strong>define at least 3 recipe objects</strong> using different ingredients. They should <strong>look like this</strong>:</p>
+<pre><code>let supersoup = {
+<span class="hljs-symbol">  potato:</span> <span class="hljs-number">3</span>,
+<span class="hljs-symbol">  onion:</span> <span class="hljs-number">1</span>,
+<span class="hljs-symbol">  corn:</span> <span class="hljs-number">1</span>
+};
+</code></pre><p>The <strong>keys are ingredients</strong>, and the values are <strong>how many of the ingredient is needed</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-9-5">
+<span class="pos">2-9-5</span>
+<div class="slidecontent"><p>Now define a <strong>shop object</strong> containing all used <strong>ingredients as keys</strong> and the corresponding <strong>price per ingredient as value</strong>.</p>
+<pre><code>let ICA = {
+<span class="hljs-symbol">  potato:</span> <span class="hljs-number">12</span>,
+<span class="hljs-symbol">  tomato:</span> <span class="hljs-number">7</span>,
+<span class="hljs-symbol">  cucumber:</span> <span class="hljs-number">3</span>,
+<span class="hljs-symbol">  corn:</span> <span class="hljs-number">5</span>,
+  <span class="hljs-comment">// ...</span>
+};
+</code></pre></div></section>
+<section class="slide" data-pos="2-9-6">
+<span class="pos">2-9-6</span>
+<div class="slidecontent"><p>Now <strong>create a function</strong> that <strong>calculates the cost for a recipe</strong>...</p>
+<p><img src="resources/diagrams/recipecostcalc.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-9-7">
+<span class="pos">2-9-7</span>
+<div class="slidecontent"><p>...and <strong>try it for a few of them</strong>:</p>
+<pre><code>console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Supersoup costs "</span>+costOfRecipe(supersoup,ICA));
+console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"My famous stew costs "</span>+costOfRecipe(stew,ICA));
+</code></pre></div></section>
+<section class="slide" data-pos="2-9-8">
+<span class="pos">2-9-8</span>
+<div class="slidecontent"><p>To test this, we simply <strong>type the following in the terminal</strong>:</p>
+<pre><code><span class="hljs-keyword">node</span> <span class="hljs-title">shop</span>
+</code></pre><p>...given that</p>
+<ul>
+<li>the <strong>name of the file is <code>shop.js</code></strong>.</li>
+<li>we&#39;re <strong>in the same folder</strong></li>
+</ul>
+</div></section>
+<section class="slide" data-pos="2-9-9">
+<span class="pos">2-9-9</span>
+<div class="slidecontent"><p>Exactly like with the previous exercise:</p>
+<ul>
+<li>You <strong>may work in teams</strong> of up to 3</li>
+<li><strong>Submit the file</strong> by putting it in your personal folder in the repo.</li>
+</ul>
+</div></section>
+<section class="slide challenge" data-pos="2-9-10">
+<span class="pos">2-9-10</span>
+<div class="slidecontent"><p><strong>Challenge</strong>: Too easy? How about this:</p>
+<ul>
+<li>Create <strong>a few other shops with different prices</strong></li>
+<li><strong>Collect all shops</strong> in a <code>shops</code> object: <code>{ ICA: {...}, coop: {...}, ... }</code>;</li>
+</ul>
+<p>And <strong>THEN</strong>:</p>
+</div></section>
+<section class="slide" data-pos="2-9-11">
+<span class="pos">2-9-11</span>
+<div class="slidecontent"><p>Create a <strong><code>findCheapestStore</code> function</strong> that takes the <code>shops</code> object and a recipe, and tells you which store is the cheapest for that recipe!</p>
+<p><img src="resources/diagrams/beststore.svg" alt=""></p>
+<p>Now demonstrate that for a few recipes:</p>
+<pre><code>console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Cost of stew at ICA"</span>, costOfRecipe(stew,ICA));
+console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Shop for supersoup at"</span>, findCheapestStore(supersoup,stores));
+</code></pre></div></section>
+<section class="slide" data-pos="2-9-12">
+<span class="pos">2-9-12</span>
+<div class="slidecontent"><div class="checklist"></div>
+
+<p>You are done when...</p>
+<ul>
+<li>typing <code>node shop</code> in the terminal shows <code>costOfRecipe</code> working</li>
+<li>...and <code>findCheapestStore</code> in case you bit into that one</li>
+</ul>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-10.</span> Functional programming</h3>
+      <p>Jumping down the rabbit hole</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="2-10-1">
+<span class="pos">2-10-1</span>
+<div class="slidecontent"><p>JavaScript is a <strong>functional language</strong>, which modern JS makes frequent use of.</p>
+<p>Let&#39;s just do a <strong>quick sanity check</strong> to make sure we&#39;re all on the same page!</p>
+</div></section>
+<section class="slide" data-pos="2-10-2">
+<span class="pos">2-10-2</span>
+<div class="slidecontent"><p>So - since <strong>functions are first class citizens</strong>, we can <strong>send them around just like any value</strong>.</p>
+<p>Which also means that <strong>a function can take, and/or return, other functions</strong>! Such a function is called a <strong>higher order function</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-10-3">
+<span class="pos">2-10-3</span>
+<div class="slidecontent"><p>As a contrived <strong>example</strong>, say we have this function:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> spam = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"SPAM!"</span>);
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-10-4">
+<span class="pos">2-10-4</span>
+<div class="slidecontent"><p>And then we have this <strong>higher order function</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">repeater</span>(<span class="hljs-params">func,times</span>)</span>{
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; times; i = i + <span class="hljs-number">1</span>){
+    func();
+  }
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-10-5">
+<span class="pos">2-10-5</span>
+<div class="slidecontent"><p>If we <strong>invoke <code>repeater</code></strong> like this:</p>
+<pre><code class="lang-javascript">repeater(spam,<span class="hljs-number">3</span>);
+</code></pre>
+<p>We would <strong>see this in the console</strong>:</p>
+<pre><code><span class="hljs-string">"SPAM!"</span>
+<span class="hljs-string">"SPAM!"</span>
+<span class="hljs-string">"SPAM!"</span>
+</code></pre></div></section>
+<section class="slide" data-pos="2-10-6">
+<span class="pos">2-10-6</span>
+<div class="slidecontent"><p>To show we can also <strong>return new functions</strong>, take a look at this beauty:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">multiplier</span>(<span class="hljs-params">func,times</span>)</span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; times; i = i + <span class="hljs-number">1</span>){
+      func();
+    }
+  };
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-10-7">
+<span class="pos">2-10-7</span>
+<div class="slidecontent"><p>Did you see the difference? <code>multiplier</code> doesn&#39;t execute the parameter function, but <strong>returns a new function</strong>!</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> tripleSpam = multiplier(spam,<span class="hljs-number">3</span>);
+</code></pre>
+<p>If we <strong>execute the returned function</strong> we get the triple spam:</p>
+<pre><code class="lang-javascript">tripleSpam(); <span class="hljs-comment">// SPAM! SPAM! SPAM!</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-10-8">
+<span class="pos">2-10-8</span>
+<div class="slidecontent"><p>Functional programming is a <strong>really powerful tool</strong>, and something that is likely to <strong>get you hooked once you have learned it</strong>. We warmly encourage you to explore the subject!</p>
+</div></section>
+<section class="slide" data-pos="2-10-9">
+<span class="pos">2-10-9</span>
+<div class="slidecontent"><p>Note: the <strong>functional paradigm</strong> is about much more than just passing functions around, we&#39;ve really just scratched the surface here.</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>2-11.</span> map, filter and reduce</h3>
+      <p>the cornerstones</p>
+</p>
+    </div>
+  </section>
+  <section class="slide list" data-pos="2-11-1">
+<span class="pos">2-11-1</span>
+<div class="slidecontent">
+<p>For applied functional programming, there are <strong>three list-operating tools</strong> that have a very central position:</p>
+<ul>
+<li><span>a</span>The <strong><code>map</code></strong> method</li>
+<li><span>b</span>The <strong><code>filter</code></strong> method</li>
+<li><span>c</span>The <strong><code>reduce</code></strong> method</li>
+</ul>
+<p>Let&#39;s <strong>take a look at these</strong>!</p>
+</div></section>
+<section class="slide num numA" data-pos="2-11-2">
+<span class="pos">2-11-2</span>
+<div class="slidecontent">
+<p>First, <strong><code>map</code></strong>. It takes a <strong>list and an iterator function</strong> as arguments, and <strong>returns a new list</strong>.</p>
+<p><img src="resources/diagrams/map.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-11-3">
+<span class="pos">2-11-3</span>
+<div class="slidecontent"><p>The <strong>iterator function</strong> that we pass in is <strong>called with each element and the index of that element</strong>, and it should <strong>return a new element</strong> to be used instead:</p>
+<p><img src="resources/diagrams/mapiterator.svg" alt=""></p>
+</div></section>
+<section class="slide question" data-pos="2-11-4">
+<span class="pos">2-11-4</span>
+<div class="slidecontent">
+<p>Here&#39;s an example. What will this call return?</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> list = [<span class="hljs-string">"David"</span>, <span class="hljs-string">"Carl"</span>, <span class="hljs-string">"Eric"</span>];
+<span class="hljs-keyword">let</span> newList = list.map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">elem</span>)</span>{
+  <span class="hljs-keyword">return</span> elem+<span class="hljs-string">"y Mc"</span>+elem+<span class="hljs-string">"face"</span>;
+});
+</code></pre>
+</div></section>
+<section class="slide answer" data-pos="2-11-5">
+<span class="pos">2-11-5</span>
+<div class="slidecontent">
+<p>Yup, <code>newList</code> will now equal this:</p>
+<pre><code class="lang-javascript">[<span class="hljs-string">"Davidy McDavidface"</span>,<span class="hljs-string">"Carly McCarlFace"</span>,<span class="hljs-string">"Ericy McEricface"</span>]
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-11-6">
+<span class="pos">2-11-6</span>
+<div class="slidecontent"><p>In essence, <code>.map</code> will <strong>create a new list of the same length</strong>, where <strong>each element is individually transformed</strong> by the iterator.</p>
+</div></section>
+<section class="slide num numB" data-pos="2-11-7">
+<span class="pos">2-11-7</span>
+<div class="slidecontent">
+<p>Next up is <strong><code>.filter</code></strong>, which is probably the easiest to understand. It has the exact <strong>same signature as <code>.map</code></strong>:</p>
+<p><img src="resources/diagrams/filter.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-11-8">
+<span class="pos">2-11-8</span>
+<div class="slidecontent"><p>The <strong>iterator</strong> is similar too, except it <strong>returns a boolean</strong> saying whether or not the element should go into the new array.</p>
+<p><img src="resources/diagrams/filteriterator.svg" alt=""></p>
+</div></section>
+<section class="slide num numC" data-pos="2-11-9">
+<span class="pos">2-11-9</span>
+<div class="slidecontent">
+<p>Now for <strong>.reduce</strong>! It is more powerful, but also harder to grasp.</p>
+</div></section>
+<section class="slide" data-pos="2-11-10">
+<span class="pos">2-11-10</span>
+<div class="slidecontent"><p>Similar to <code>.map</code> it <strong>takes a list and an iterator</strong>, but also a <strong>seed value</strong>. Unlike <code>.map</code> it doesn&#39;t necessarily return a list, instead it can <strong>return any value</strong>.</p>
+<p><img src="resources/diagrams/reduce.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-11-11">
+<span class="pos">2-11-11</span>
+<div class="slidecontent"><p>The <strong>iterator function</strong> is called with <strong>each element</strong> and the <strong><code>current value</code></strong> (sometimes called <code>memory</code> or <code>accumulator</code>), and <strong>returns a new value</strong>.</p>
+<p><img src="resources/diagrams/reduceiterator.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="2-11-12">
+<span class="pos">2-11-12</span>
+<div class="slidecontent"><p>The <strong><code>seed</code></strong> that we passed in to <code>.reduce</code> is <strong>used as the <code>current value</code> for the first iterator call</strong>.</p>
+<p>The <strong>result of the <code>.reduce</code> call</strong> is whatever is <strong>returned from the last iterator call</strong>.</p>
+</div></section>
+<section class="slide" data-pos="2-11-13">
+<span class="pos">2-11-13</span>
+<div class="slidecontent"><p>In other words, it looks like this (for a 3-item list):</p>
+<p><img src="resources/diagrams/reducesteps.svg" alt=""></p>
+</div></section>
+<section class="slide question" data-pos="2-11-14">
+<span class="pos">2-11-14</span>
+<div class="slidecontent">
+<p>Here&#39;s a code example. What does it return?</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> list = [<span class="hljs-string">"David"</span>, <span class="hljs-string">"Carl"</span>, <span class="hljs-string">"Eric"</span>];
+<span class="hljs-keyword">let</span> something = list.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">mem, elem</span>)</span>{
+  mem[elem.length] = mem[elem.length] || <span class="hljs-number">0</span>;
+  mem[elem.length]++;
+  <span class="hljs-keyword">return</span> mem;
+}, {})
+</code></pre>
+</div></section>
+<section class="slide answer" data-pos="2-11-15">
+<span class="pos">2-11-15</span>
+<div class="slidecontent">
+<p>it returns an object which counts how many words of each length the list contains:</p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-number">4</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-number">5</span>: <span class="hljs-number">1</span> 
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="2-11-16">
+<span class="pos">2-11-16</span>
+<div class="slidecontent"><p>As previously stated, <code>.reduce</code> is <strong>hard to grasp</strong> but <strong>immensely powerful</strong>.</p>
+<p>A quick proof of that is that it can be used to <strong>implement both <code>.map</code> and <code>.filter</code></strong>. So 
+<strong><code>.reduce</code> is really all we need</strong>!</p>
+</div></section>
+<section class="slide" data-pos="2-11-17">
+<span class="pos">2-11-17</span>
+<div class="slidecontent"><p>If you slept through the section, here&#39;s a <strong>popular tweet recap</strong>:</p>
+<div style="display: inline-block; width: 300px;">
+<img src="resources/images/functweet.png" alt="">
+</div></div></section>
+<section class="slide" data-pos="2-11-18">
+<span class="pos">2-11-18</span>
+<div class="slidecontent"><p>Since ES5.1, these methods are <strong>available on the array prototype</strong>, which somewhat <strong>diminishes the need for Underscore/Lodash</strong>.</p>
+<p>This is a general trend, very <strong>similar to the situation with jQuery and the DOM</strong>.</p>
+</div></section>
+</section>
+
+  </div>
+  
+</div>
+<div class="chaptercontainer">
+  <div class="chapterstart">
+    <span>chapter 3 / 3</span>
+    <h2>Getting started</h2>
+    
+  </div>
+  
+  <div class="chaptersectionlist">
+  <h3>Sections in this chapter:</h3>
+  <ul>
+    <li>1. CSS refresher</li>
+<li>2. Exercise - static content</li>
+<li>3. Git and Github</li>
+<li>4. Exercise - set up repo</li>
+<li>5. DOM nodes</li>
+<li>6. Exercise - Data migration</li>
+<li>7. DOM event refresher</li>
+<li>8. Exercise - add user rating</li>
+<li>9. jQuery refresher</li>
+<li>10. Exercise - jQuerify</li>
+  </ul>
+</div>
+
+  <div class="chaptersections">
+    <section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-1.</span> CSS refresher</h3>
+      <p>Some useful patterns</p>
+</p>
+    </div>
+  </section>
+  <section class="slide list" data-pos="3-1-1">
+<span class="pos">3-1-1</span>
+<div class="slidecontent">
+<p>Let&#39;s repeat a few <strong>useful CSS patterns</strong>:</p>
+<ul>
+<li><span>a</span>packing the box</li>
+<li><span>b</span>centering a block horisontally</li>
+<li><span>c</span>selecting via attributes</li>
+<li><span>d</span>limiting an image width</li>
+<li><span>e</span>preventing text selection</li>
+<li><span>f</span>column layout</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-1-2">
+<span class="pos">3-1-2</span>
+<div class="slidecontent">
+<p>The <strong>box model</strong> used to represent a node looks like this:</p>
+<p><img src="resources/diagrams/boxmodel.svg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="3-1-3">
+<span class="pos">3-1-3</span>
+<div class="slidecontent"><p>This means that if you apply <strong>padding</strong> it goes inside an eventual border, and will be coloured by the background.</p>
+<p>While <strong>margin</strong> won&#39;t be, since it is in essence <em>outside</em> the element.</p>
+</div></section>
+<section class="slide num numB" data-pos="3-1-4">
+<span class="pos">3-1-4</span>
+<div class="slidecontent">
+<p>We can <strong>center a block horisontally</strong> in many different ways. Here&#39;s a common solution:</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.contentBlock</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-1-5">
+<span class="pos">3-1-5</span>
+<div class="slidecontent"><p>Note that this <strong>only works if the block has a set width</strong>, otherwise it&#39;ll take up the full width and we won&#39;t see any centering!</p>
+</div></section>
+<section class="slide num numC" data-pos="3-1-6">
+<span class="pos">3-1-6</span>
+<div class="slidecontent">
+<p>There is a distinct possibility you might soon need to <strong>select element via attributes</strong>. This is done using <strong>square brackets</strong>:</p>
+<pre><code class="lang-css"><span class="hljs-selector-attr">[data-class=skeleton]</span> {
+  <span class="hljs-comment">/* spooky styles go here */</span>
+}
+</code></pre>
+<p>See the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">MDN rating docs</a> for the full available syntax.</p>
+</div></section>
+<section class="slide num numD" data-pos="3-1-7">
+<span class="pos">3-1-7</span>
+<div class="slidecontent">
+<p>We can <strong>limit an image&#39;s width</strong> using the <code>max-</code> prefixed dimensions:</p>
+<pre><code><span class="hljs-selector-class">.myImage</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">400px</span>;
+}
+</code></pre></div></section>
+<section class="slide num numE" data-pos="3-1-8">
+<span class="pos">3-1-8</span>
+<div class="slidecontent">
+<p>When we <strong>use text elements for interaction</strong> we often want to...</p>
+<ul>
+<li>prevent selection</li>
+<li>make pointer indicate clickability</li>
+</ul>
+<pre><code><span class="hljs-selector-class">.myElem</span> {
+  <span class="hljs-attribute">user-select</span>: none;
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+</code></pre></div></section>
+<section class="slide num numF" data-pos="3-1-9">
+<span class="pos">3-1-9</span>
+<div class="slidecontent">
+<p>To lay out children of an element as columns we use <strong>flexbox</strong>:</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: row;
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-1-10">
+<span class="pos">3-1-10</span>
+<div class="slidecontent"><p>By default the columns will get equal width. If you have <strong>fixed-width</strong> columns you can make the other columns share the leftover space by giving them:</p>
+<pre><code><span class="hljs-selector-class">.columnThatShouldGrow</span> {
+  <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+}
+</code></pre></div></section>
+<section class="slide" data-pos="3-1-11">
+<span class="pos">3-1-11</span>
+<div class="slidecontent"><p>Note that <strong>sized images can behave weirdly</strong> when used as flexbox children.</p>
+<p>Prevent this by <strong>wrapping them in a div</strong>!</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-2.</span> Exercise - static content</h3>
+      <p>Laying the foundation</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="3-2-1">
+<span class="pos">3-2-1</span>
+<div class="slidecontent"><p><div class="goal"></div>
+Goal: Make <strong>HTML</strong> and <strong>CSS</strong> to show a <strong>movie review</strong> page</p>
+</div></section>
+<section class="slide" data-pos="3-2-2">
+<span class="pos">3-2-2</span>
+<div class="slidecontent"><p>Here&#39;s what we&#39;re going for:</p>
+<p><img src="resources/images/moviereview.png" alt=""></p>
+</div></section>
+<section class="slide list" data-pos="3-2-3">
+<span class="pos">3-2-3</span>
+<div class="slidecontent">
+<p>Here&#39;s the battle plan</p>
+<ul>
+<li><span>a</span>create a <strong>project folder</strong></li>
+<li><span>b</span>add <strong>html file</strong></li>
+<li><span>c</span>add <strong>css file</strong></li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-2-4">
+<span class="pos">3-2-4</span>
+<div class="slidecontent">
+<p>Create <strong>folder</strong> somewhere to host our movie review project. Open that folder in Visual Studio Code.</p>
+</div></section>
+<section class="slide num numB" data-pos="3-2-5">
+<span class="pos">3-2-5</span>
+<div class="slidecontent">
+<p>Add a new file called <strong><code>index.html</code></strong>.</p>
+<p><img src="resources/images/vcs-createfile.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="3-2-6">
+<span class="pos">3-2-6</span>
+<div class="slidecontent"><p>Make VSC give you a <strong>base to start</strong> by entering...</p>
+<pre><code><span class="hljs-selector-tag">html</span>:<span class="hljs-number">5</span>
+</code></pre><p>...at the top of the file and then <strong>hit tab</strong>. Voilà, you get a full HTML document!</p>
+</div></section>
+<section class="slide" data-pos="3-2-7">
+<span class="pos">3-2-7</span>
+<div class="slidecontent"><p>Now <strong>flesh out the document</strong> with the HTML needed to get the same contents as in the screenshot!</p>
+<p>Although, of course, you are free to <strong>choose any movie</strong>.</p>
+</div></section>
+<section class="slide" data-pos="3-2-8">
+<span class="pos">3-2-8</span>
+<div class="slidecontent"><p>Your review should contain the <strong>exact same parts</strong> as mine:</p>
+<ul>
+<li>an image</li>
+<li>a title</li>
+<li>a short text</li>
+<li>a list of notable actors</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="3-2-9">
+<span class="pos">3-2-9</span>
+<div class="slidecontent"><p>Regarding the image, <strong>don&#39;t download it locally</strong>! Instead simply <strong>link to it online</strong>.</p>
+<pre><code>&lt;img <span class="hljs-attribute">src</span>=<span class="hljs-string">"http://bit.ly/kvalitetsrullebild"</span>&gt;
+</code></pre></div></section>
+<section class="slide num numC" data-pos="3-2-10">
+<span class="pos">3-2-10</span>
+<div class="slidecontent">
+<p>Time to add a <strong>coat of paint</strong>!</p>
+<p>Create a new file in our folder called <strong><code>styles.css</code></strong>:</p>
+<p><img src="resources/images/cssfile.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="3-2-11">
+<span class="pos">3-2-11</span>
+<div class="slidecontent"><p>Connect it via a <strong>link element</strong> in the head of <code>index.html</code>.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"styles.css"</span>&gt;</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-2-12">
+<span class="pos">3-2-12</span>
+<div class="slidecontent"><p>Now add some CSS in that file to...</p>
+<ul>
+<li>make the site <strong>centered vertically</strong></li>
+<li>lay it out in <strong>two columns</strong></li>
+<li><strong>size the image</strong> so it isn&#39;t too big or small</li>
+<li>tweak the rest as you please!</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="3-2-13">
+<span class="pos">3-2-13</span>
+<div class="slidecontent"><div class="checklist"></div>
+
+<p>You are done when...</p>
+<ul>
+<li>double-clicking <code>index.html</code> shows the review in a browser</li>
+<li>it looks ok (don&#39;t spend too long!)</li>
+</ul>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-3.</span> Git and Github</h3>
+      <p>The tools of the trade</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="3-3-1">
+<span class="pos">3-3-1</span>
+<div class="slidecontent"><p>Chances are very slim that you&#39;ll be able to do modern web work without using...</p>
+<ul>
+<li>Git for version controlling and collaboration</li>
+<li>Github for an online-hosted master Git repo</li>
+</ul>
+</div></section>
+<section class="slide list" data-pos="3-3-2">
+<span class="pos">3-3-2</span>
+<div class="slidecontent">
+<p>Probably you&#39;re already up and running (?), but here&#39;s a <strong>condenced guide</strong> for common patterns:</p>
+<ul>
+<li><span>a</span>First-time setup</li>
+<li><span>b</span>The idea of a commit </li>
+<li><span>c</span>The commit flow</li>
+<li><span>d</span>Excluding files</li>
+<li><span>e</span>Seeing what changed</li>
+<li><span>f</span>A log of changes</li>
+<li><span>g</span>Central master repo</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-3-3">
+<span class="pos">3-3-3</span>
+<div class="slidecontent">
+<p>If this is your first time with Git, you will want to start by <strong>configuring Git</strong>
+to recognize your name and email address.</p>
+<pre><code>git<span class="hljs-built_in"> config </span>--global user.name <span class="hljs-string">"Your Name Here"</span>
+git<span class="hljs-built_in"> config </span>--global user.email <span class="hljs-string">"your_email@youremail.com"</span>
+</code></pre></div></section>
+<section class="slide num numB" data-pos="3-3-4">
+<span class="pos">3-3-4</span>
+<div class="slidecontent">
+<p>Git centers around the idea of a <strong>commit</strong>. We <em>make a commit for each change</em> you wish
+to record in the system</p>
+<div class="warning-border">
+    Some version control systems keep track of history
+    per file. Git versions the whole tree. 
+</div></div></section>
+<section class="slide" data-pos="3-3-5">
+<span class="pos">3-3-5</span>
+<div class="slidecontent"><p>A <strong>commit consists of</strong>:</p>
+<ul>
+<li>A snapshot of all the files</li>
+<li>A commit message</li>
+<li>An author</li>
+<li>A date</li>
+</ul>
+</div></section>
+<section class="slide num numC" data-pos="3-3-6">
+<span class="pos">3-3-6</span>
+<div class="slidecontent">
+<p>In Git, committing is a two-step process</p>
+<p><img class="img_no_border"
+     src="resources/images/adding_and_committing.png"
+     alt="Git-add-commit"
+     style="max-height: 500px" /></p>
+</div></section>
+<section class="slide" data-pos="3-3-7">
+<span class="pos">3-3-7</span>
+<div class="slidecontent"><p>The <code>add</code> command <strong>places a file in the staging area</strong>
+<small>Below is given that the README file exists</small></p>
+<pre><code class="lang-diff">$ git add README.md
+</code></pre>
+<p>The <code>commit</code> command then takes the contents of the
+staging area, and creates a commit</p>
+<pre><code class="lang-diff">$ git commit
+
+[master (root-commit) beb9dfd] Add a README.
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 README
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-3-8">
+<span class="pos">3-3-8</span>
+<div class="slidecontent"><p>For <strong>existing files</strong>, <code>add</code> will place the changes to that
+file into the staging area, so you can commit changes
+with two commands:</p>
+<pre><code class="lang-diff">$ git add README
+$ git commit
+</code></pre>
+<p><small>
+(A shorthand for these steps: <code>git commit README</code>)
+</small></p>
+</div></section>
+
+<section class="slide num numD" data-pos="3-3-10">
+<span class="pos">3-3-10</span>
+<div class="slidecontent">
+<p>We want to avoid tracking <strong>generated files</strong> with Git. Let&#39;s say these are created by our build step:</p>
+<pre class="custom-code">
+    <code># On branch master
+# Untracked files:
+#
+#       <span class="warning-text">main.exe</span>
+#       <span class="warning-text">main.obj</span>
+#       <span class="warning-text">util.obj</span></code>
+</pre></div></section>
+<section class="slide" data-pos="3-3-11">
+<span class="pos">3-3-11</span>
+<div class="slidecontent"><p>The solution avoid tracking them is to <em>add a .gitignore</em> file</p>
+<p>Content for .gitignore</p>
+<pre><code class="lang-diff">*.exe
+*.obj
+</code></pre>
+<p>Then commit the file</p>
+<pre><code class="lang-diff">$ git add .gitignore
+$ git commit
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-3-12">
+<span class="pos">3-3-12</span>
+<div class="slidecontent"><p>The <code>.gitignore</code> file won&#39;t be of immediate use, but we&#39;ll employ it in the <strong>next chapter</strong>.</p>
+</div></section>
+<section class="slide num numE" data-pos="3-3-13">
+<span class="pos">3-3-13</span>
+<div class="slidecontent">
+<p>While <code>git status</code> gives you an overview of your changes, <strong><code>git diff</code> shows what changed</strong>.</p>
+<pre><code class="lang-diff">$ git diff
+</code></pre>
+<pre><code class="lang-diff">diff --git a/src/util.c b/src/util.c
+index 9fe5927..e826a45 100644
+<span class="hljs-comment">--- a/src/util.c</span>
+<span class="hljs-comment">+++ b/src/util.c</span>
+<span class="hljs-meta">@@ -1,7 +1,7 @@</span>
+ #include &lt;stdio.h&gt;
+
+<span class="hljs-deletion">-void print_ten_times(char *msg) {</span>
+<span class="hljs-addition">+void print_n_times(char *msg, int n) {</span>
+     int i;
+<span class="hljs-deletion">-    for (i = 0; i &lt; 10; i++)</span>
+<span class="hljs-addition">+    for (i = 0; i &lt; n; i++)</span>
+         printf(msg);
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-3-14">
+<span class="pos">3-3-14</span>
+<div class="slidecontent"><p>This is so useful that <strong>VSC has a tab for it</strong>:</p>
+<p><img src="resources/images/gitdiffvsc.png" alt=""></p>
+</div></section>
+<section class="slide num numF" data-pos="3-3-15">
+<span class="pos">3-3-15</span>
+<div class="slidecontent">
+<p>Typing <code>git log</code> shows a log of all the commits, most recent commit first</p>
+<pre class="custom-code">
+    <code><span class="gold-text">commit e20962ebed7b0288922320f217a6a3ab9371727c</span>
+Author: jnthn <jnthn@jnthn.net>
+Date:   Wed Apr 18 18:09:02 2012 +0200
+
+  Add a .gitignore.
+
+<span class="gold-text">commit eae16e7a7f34d1208ca8267c2fabbbc1eb8e3640</span>
+Author: jnthn <jnthn@jnthn.net>
+Date:   Wed Apr 18 17:56:55 2012 +0200
+
+  Factor printing out to a utility file.
+
+...</code>
+</pre></div></section>
+<section class="slide" data-pos="3-3-16">
+<span class="pos">3-3-16</span>
+<div class="slidecontent"><p>The log command has more options than you can possibly imagine;
+one fairly useful one is:</p>
+<pre><code class="lang-diff">$ git log --oneline
+</code></pre>
+<pre class="custom-code">
+    <code><span class="gold-text">e20962e</span> Add a .gitignore.
+<span class="gold-text">eae16e7</span> Factor printing out to a utility file.
+<span class="gold-text">887f06c</span> Start le coding!
+<span class="gold-text">869cec3</span> Update README.
+<span class="gold-text">8356287</span> Add a README.</code>
+</pre>
+
+
+<p>To learn about (literally) dozens more, see:</p>
+<pre><code class="lang-diff">$ git help log
+</code></pre>
+</div></section>
+<section class="slide num numG" data-pos="3-3-17">
+<span class="pos">3-3-17</span>
+<div class="slidecontent">
+<p>The most common use of remotes is to set up a <strong>central repository</strong></p>
+<p><img src="resources/images/a_central_repository.png"
+     alt="Merge commits"
+     class="img_no_border no_margin"></p>
+<div class="info-border">
+    It&#39;s the central repository because everyone
+    agrees it is. To Git, it&#39;s just another copy.
+</div></div></section>
+<section class="slide" data-pos="3-3-18">
+<span class="pos">3-3-18</span>
+<div class="slidecontent"><p>There are a range of hosted Git services out there,
+which can host your central repository for you</p>
+<p><strong>GitHub</strong> is the largest today, offering free hosting
+for public repositories (used by thousands of open
+source projects) and private hosting for individuals
+and organizations</p>
+</div></section>
+<section class="slide" data-pos="3-3-19">
+<span class="pos">3-3-19</span>
+<div class="slidecontent"><p>Creating an account is free, and easy.</p>
+<p>If you haven&#39;t already got one, simply go to <code>https://github.com/</code> and follow the directions!</p>
+</div></section>
+<section class="slide" data-pos="3-3-20">
+<span class="pos">3-3-20</span>
+<div class="slidecontent"><p>After creating a repository on GitHub, we need to
+tell our local Git repository about it by <strong>adding
+it as a remote</strong>:</p>
+<pre><code class="lang-diff">$ git remote add origin https://github.com/&lt;user&gt;/&lt;repo&gt;.git
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-3-21">
+<span class="pos">3-3-21</span>
+<div class="slidecontent"><p>Since you <strong>can have multiple remotes</strong>, you have to <strong>specify a name</strong> as well as the address</p>
+<p>The convention used by almost all Git users is to give the <strong>central repository</strong> remote the name <code>origin</code>, but there&#39;s no technical magic to the name.</p>
+</div></section>
+<section class="slide" data-pos="3-3-22">
+<span class="pos">3-3-22</span>
+<div class="slidecontent"><p><strong>Pushing</strong> is taking commits we have locally and
+<strong>copying them to a remote</strong>.</p>
+<p>Our <strong>first push</strong> should use the -u flag:</p>
+<pre><code class="lang-diff">$ git push -u origin master
+</code></pre>
+<p>After that you can simply push:</p>
+<pre><code class="lang-bash">$ git push
+</code></pre>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-4.</span> Exercise - set up repo</h3>
+      <p>Becoming part of the world</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="3-4-1">
+<span class="pos">3-4-1</span>
+<div class="slidecontent"><div class="goal"></div>
+
+<p>Goal: <strong>Track our code</strong> in an <strong>online git repo</strong>!</p>
+</div></section>
+<section class="slide list" data-pos="3-4-2">
+<span class="pos">3-4-2</span>
+<div class="slidecontent">
+<p>Here&#39;s what we need to do:</p>
+<ul>
+<li><span>a</span>init git repo locally</li>
+<li><span>b</span>create github repo</li>
+<li><span>c</span>add remote to local repo</li>
+<li><span>d</span>start tracking files</li>
+<li><span>e</span>do initial commit</li>
+<li><span>f</span>push to github repo</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-4-3">
+<span class="pos">3-4-3</span>
+<div class="slidecontent">
+<p><strong>Initialise a git repo</strong> in the project folder by <strong>navigating to it in a terminal</strong> and type:</p>
+<pre><code class="lang-bash">git init
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-4-4">
+<span class="pos">3-4-4</span>
+<div class="slidecontent"><p>This will create an <strong>invisible <code>.git</code> folder</strong> where Git does its magic:</p>
+<p><img src="resources/images/invisiblegitfolder.png" alt=""></p>
+<p>(depending on your OS settings this might be hidden)</p>
+</div></section>
+<section class="slide num numB" data-pos="3-4-5">
+<span class="pos">3-4-5</span>
+<div class="slidecontent">
+<p>Now <strong>log into Github</strong> and <strong>create a new repo</strong> using the plus button in the top-right corner:</p>
+<p><img src="resources/images/newgithubrepo.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="3-4-6">
+<span class="pos">3-4-6</span>
+<div class="slidecontent"><p>Give the new repo a <strong>fitting name</strong>:</p>
+<p><img src="resources/images/newreponame.png" alt=""></p>
+<p>No other settings need to be filled. When you&#39;re done, hit the green <strong>Create repository</strong> button at the bottom!</p>
+</div></section>
+<section class="slide" data-pos="3-4-7">
+<span class="pos">3-4-7</span>
+<div class="slidecontent"><p>This will transition you to <code>github.com/yourusername/yourreponame</code>. Here, make sure <strong><code>HTTPS</code> is selected</strong> and then hit the far-right button to <strong>copy the HTTPS path</strong>!</p>
+<p><img src="resources/images/copynewrepoaddress.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="3-4-8">
+<span class="pos">3-4-8</span>
+<div class="slidecontent"><p><strong>If you get tired of typing your password all the time:</strong></p>
+<p>You can switch your remote to use <strong>ssh</strong> if you have time left after finishing the exercise.</p>
+</div></section>
+<section class="slide num numC" data-pos="3-4-9">
+<span class="pos">3-4-9</span>
+<div class="slidecontent">
+<p>Now we need to add the Github repo as a <strong>remote</strong> in our local one! In the terminal, while somewhere inside your local gitrepo, type:</p>
+<pre><code class="lang-bash">git remote add origin https://some.url
+</code></pre>
+<p>...where you simply <strong>paste</strong> the final part to be the correct URL for your repo!</p>
+</div></section>
+<section class="slide num numD" data-pos="3-4-10">
+<span class="pos">3-4-10</span>
+<div class="slidecontent">
+<p>We must now tell our local repo to <strong>track the files</strong>!</p>
+<p>Since we want to <strong>track everything</strong>, we can cheat by simply doing this...</p>
+<pre><code class="lang-bash">git add .
+</code></pre>
+<p>...in the root of our repo.</p>
+</div></section>
+<section class="slide num numE" data-pos="3-4-11">
+<span class="pos">3-4-11</span>
+<div class="slidecontent">
+<p>The former command will stage the initial state of those files. Let&#39;s commit it!</p>
+<pre><code class="lang-bash">git commit -m <span class="hljs-string">"initial commit"</span>
+</code></pre>
+</div></section>
+<section class="slide num numF" data-pos="3-4-12">
+<span class="pos">3-4-12</span>
+<div class="slidecontent">
+<p>Now we must tell our remote repo about the changes we&#39;ve made:</p>
+<pre><code class="lang-bash">git push -u origin master
+</code></pre>
+<p>If you reload your repo in the weppage, you should now see your files!</p>
+</div></section>
+<section class="slide" data-pos="3-4-13">
+<span class="pos">3-4-13</span>
+<div class="slidecontent"><div class="checklist"></div>
+
+<p>You are done when...</p>
+<ul>
+<li>There&#39;s a repo on Github...</li>
+<li>...that contains all of the code</li>
+</ul>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-5.</span> DOM nodes</h3>
+      <p>node juggling</p>
+</p>
+    </div>
+  </section>
+  <section class="slide list" data-pos="3-5-1">
+<span class="pos">3-5-1</span>
+<div class="slidecontent">
+<p>Let&#39;s refresh...</p>
+<ul>
+<li><span>a</span>how to get references to DOM nodes</li>
+<li><span>b</span>how to manipulate a DOM node</li>
+<li><span>c</span>how to create DOM nodes</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-5-2">
+<span class="pos">3-5-2</span>
+<div class="slidecontent">
+<p>We can <strong>get a reference to a DOM node</strong> in a bunch of different ways. Some methods return <strong>a single element</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> node = <span class="hljs-built_in">document</span>.body;
+<span class="hljs-keyword">let</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"someId"</span>);
+<span class="hljs-keyword">let</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"div &gt; p:first-child"</span>);
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-5-3">
+<span class="pos">3-5-3</span>
+<div class="slidecontent"><p>..while others give us a <strong>list of matching nodes</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> nodes = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">"div"</span>);
+<span class="hljs-keyword">let</span> nodes = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">"someClass"</span>);
+<span class="hljs-keyword">let</span> nodes = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">"div &gt; p:first-child"</span>);
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-5-4">
+<span class="pos">3-5-4</span>
+<div class="slidecontent"><p>From a node reference we can access the <strong>element above that element</strong>...</p>
+<pre><code><span class="hljs-keyword">node</span>.<span class="hljs-title">parent</span>
+</code></pre><p>...or the <strong>elements below</strong>:</p>
+<pre><code><span class="hljs-keyword">node</span>.<span class="hljs-title">children</span>
+</code></pre></div></section>
+<section class="slide num numB" data-pos="3-5-5">
+<span class="pos">3-5-5</span>
+<div class="slidecontent">
+<p>Once we have a node reference there&#39;s a <strong>huge number of things</strong> we can do with it! The DOM API is enormous.</p>
+<p>But here we&#39;ll just show a few useful things!</p>
+</div></section>
+<section class="slide" data-pos="3-5-6">
+<span class="pos">3-5-6</span>
+<div class="slidecontent"><p>We can <strong>add a class</strong>...</p>
+<pre><code class="lang-javascript">node.classList.add(<span class="hljs-string">"someClass"</span>);
+</code></pre>
+<p>...or <strong>remove it</strong>...</p>
+<pre><code class="lang-javascript">node.classList.remove(<span class="hljs-string">"someClass"</span>);
+</code></pre>
+<p>...or <strong>test if it has a certain class</strong>:</p>
+<pre><code class="lang-javascript">node.classList.contains(<span class="hljs-string">"someClass"</span>) <span class="hljs-comment">// true or false</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-5-7">
+<span class="pos">3-5-7</span>
+<div class="slidecontent"><p>We can <strong>change the text content of a node</strong>...</p>
+<pre><code class="lang-javascript">node.textContent = <span class="hljs-string">"Hello world!"</span>;
+</code></pre>
+<p>...or <strong>HTML content</strong>:</p>
+<pre><code class="lang-javascript">node.textContent = <span class="hljs-string">"&lt;strong&gt;Hello world!&lt;/strong&gt;"</span>;
+</code></pre>
+<p>In both cases we <strong>erase eventual previous content</strong>.</p>
+</div></section>
+<section class="slide" data-pos="3-5-8">
+<span class="pos">3-5-8</span>
+<div class="slidecontent"><p>What about <strong>attributes</strong> on elements?</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-ref</span>=<span class="hljs-string">"Ek#AfZW2"</span>&gt;</span>
+</code></pre>
+<p>We can <strong>query them</strong>...</p>
+<pre><code class="lang-javascript">node.getAttribute(<span class="hljs-string">"data-ref"</span>); <span class="hljs-comment">// "Ek#AfZW2"</span>
+</code></pre>
+<p>...and <strong>set them</strong>:</p>
+<pre><code class="lang-javascript">node.setAttribute(<span class="hljs-string">"data-ref"</span>,<span class="hljs-string">"someNewRef"</span>);
+</code></pre>
+</div></section>
+<section class="slide num numC" data-pos="3-5-9">
+<span class="pos">3-5-9</span>
+<div class="slidecontent">
+<p>Finally, let&#39;s see how we <strong>create DOM nodes</strong>!</p>
+<pre><code><span class="hljs-attribute">let newNode</span> = document.createElement(<span class="hljs-string">"div"</span>);
+</code></pre><p>Just instantiating a node like this doesn&#39;t do anything - it <strong>isn&#39;t connected to the document</strong>.</p>
+</div></section>
+<section class="slide" data-pos="3-5-10">
+<span class="pos">3-5-10</span>
+<div class="slidecontent"><p>In order to accomplish that we need to <strong>append</strong> or <strong>prepend</strong> the node to a parent node:</p>
+<pre><code>let existingNode = document.getElementById(<span class="hljs-string">"someId"</span>)<span class="hljs-comment">;</span>
+existingNode.appendChild(newNode)<span class="hljs-comment">;</span>
+</code></pre><p>There is of course a corresponding <code>.prependChild</code> too.</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-6.</span> Exercise - Data migration</h3>
+      
+    </div>
+  </section>
+  <section class="slide" data-pos="3-6-1">
+<span class="pos">3-6-1</span>
+<div class="slidecontent"><div class="goal"></div>
+
+<p>Goal: no more hardcoded data in the HTML!</p>
+</div></section>
+<section class="slide list" data-pos="3-6-2">
+<span class="pos">3-6-2</span>
+<div class="slidecontent">
+<p>Here&#39;s the plan to accomplish this:</p>
+<ul>
+<li><span>a</span>migrate data</li>
+<li><span>b</span>make HTML elements referrable</li>
+<li><span>c</span>make renderMovie function</li>
+<li><span>d</span>bootstrap application</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-6-3">
+<span class="pos">3-6-3</span>
+<div class="slidecontent">
+<p>As a first step, let&#39;s <strong>move the data</strong> from the HTML to a <strong>data variable</strong>. Create a <strong>new <code>data.js</code> file</strong> where we can do our work!</p>
+<p><img src="resources/images/datafile.png" alt=""></p>
+<p>Then <strong>include this in <code>index.html</code></strong> via a script element:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./data.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-6-4">
+<span class="pos">3-6-4</span>
+<div class="slidecontent"><p>in this file, declare a <strong><code>movieData</code></strong> variable. This will hold an <strong>object containing the movie data</strong>!</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> movieData = {
+  <span class="hljs-comment">// movie info will go here</span>
+};
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-6-5">
+<span class="pos">3-6-5</span>
+<div class="slidecontent"><p>Now start <strong>strip out the data</strong> from the template and <strong>move it into the object</strong>!</p>
+<p>For each piece of data you&#39;ll have to...</p>
+<ul>
+<li><strong>make up a suitable key</strong>.</li>
+<li><strong>add the key</strong> and the <strong>corresponding value</strong> to the object</li>
+<li><strong>remove the data</strong> from the HTML</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="3-6-6">
+<span class="pos">3-6-6</span>
+<div class="slidecontent"><p>For instance, the <strong>movie title</strong>...</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Inception<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+</code></pre>
+<p>...might end up like this...</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> movieData = {
+  <span class="hljs-attr">title</span>: <span class="hljs-string">"Inception"</span>,
+  <span class="hljs-comment">// rest of data will follow here</span>
+};
+</code></pre>
+<p>...leaving the HTML like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-6-7">
+<span class="pos">3-6-7</span>
+<div class="slidecontent"><p>Keep adding the other pieces of data to the object until <strong>no data remains in the HTML template</strong>!</p>
+</div></section>
+<section class="slide" data-pos="3-6-8">
+<span class="pos">3-6-8</span>
+<div class="slidecontent"><p>The <strong>list of actors</strong> should end up as an <strong>array of strings</strong>...</p>
+<pre><code class="lang-javascript">[<span class="hljs-string">"Leonardo DiCaprio"</span>, <span class="hljs-string">"Ellen Page"</span>, <span class="hljs-string">"Tom Hardy"</span>]
+</code></pre>
+<p>...and the HTML list should be an <strong>empty <code>ul</code></strong>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+</div></section>
+<section class="slide num numB" data-pos="3-6-9">
+<span class="pos">3-6-9</span>
+<div class="slidecontent">
+<p>The plan of course is to <strong>programmatically add the data</strong> to the document instead. This requires <strong>getting references to the nodes</strong> to insert the various pieces of data in the correct places!</p>
+</div></section>
+<section class="slide" data-pos="3-6-10">
+<span class="pos">3-6-10</span>
+<div class="slidecontent"><p>To make this easier, <strong>add id:s or classes</strong> as you see fit to the now-empty elements in <code>index.html</code>. For example:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"movietitle"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-6-11">
+<span class="pos">3-6-11</span>
+<div class="slidecontent"><p>Side note; with some clever use of CSS selectors it&#39;s possible to get the correct nodes <strong>without classes or id:s</strong>.</p>
+<p>So, if you feel up for it, feel free to <strong>skip this step</strong>!</p>
+</div></section>
+<section class="slide num numC" data-pos="3-6-12">
+<span class="pos">3-6-12</span>
+<div class="slidecontent">
+<p>Let&#39;s create a <strong>new <code>code.js</code> file</strong> to hold the movie rendering logic:</p>
+<p><img src="resources/images/codefile.png" alt=""></p>
+<p>Add this too to <code>index.html</code> via a <strong><code>script</code> element</strong>.</p>
+</div></section>
+<section class="slide" data-pos="3-6-13">
+<span class="pos">3-6-13</span>
+<div class="slidecontent"><p>Inside that file, create a <strong><code>renderMovie</code> function</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderMovie</span>(<span class="hljs-params">movie</span>)</span>{
+  <span class="hljs-comment">// rendering logic will go here</span>
+}
+</code></pre>
+<p>This function will <strong>receive a movie object</strong> like the one in <code>data.js</code>, and <strong>update the document</strong> by mutating the right nodes with the right data!</p>
+</div></section>
+<section class="slide" data-pos="3-6-14">
+<span class="pos">3-6-14</span>
+<div class="slidecontent"><p>For example, dealing with the title:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderMovie</span>(<span class="hljs-params">movie</span>)</span>{
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"movietitle"</span>).innerText = movie.title;
+  <span class="hljs-comment">// rest of data will be inserted here</span>
+}
+</code></pre>
+<p>Now <strong>finish the function</strong> so that it renders all movie data!</p>
+</div></section>
+<section class="slide" data-pos="3-6-15">
+<span class="pos">3-6-15</span>
+<div class="slidecontent"><p>For the <strong>list of actors</strong> you have a choice; you can...</p>
+<ul>
+<li><strong>create list nodes individually</strong> and append them to the <code>ul</code></li>
+<li><strong>build an HTML string</strong> of all actor li:s and use <code>innerHTML</code> on the <code>ul</code> instead.</li>
+</ul>
+</div></section>
+<section class="slide num numD" data-pos="3-6-16">
+<span class="pos">3-6-16</span>
+<div class="slidecontent">
+<p>Finally we need to <strong>bootstrap our application</strong>. In our case this is easy - simply <strong>call <code>renderMovie</code> with the data</strong><code>at the bottom of</code>code.js`!</p>
+<pre><code class="lang-javascript">renderMovie(movieData); <span class="hljs-comment">// movieData variable created in data.js</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-6-17">
+<span class="pos">3-6-17</span>
+<div class="slidecontent"><div class="checklist"></div>
+
+<p>You are done when...</p>
+<ul>
+<li>The review looks just like before</li>
+<li>There&#39;s no data in the HTML</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="3-6-18">
+<span class="pos">3-6-18</span>
+<div class="slidecontent"><p>And of course you&#39;ll be a good citizen and <strong>keep doing the git flow</strong> while you work!</p>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-7.</span> DOM event refresher</h3>
+      <p>Gotta catch &#39;em all</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="3-7-1">
+<span class="pos">3-7-1</span>
+<div class="slidecontent"><p>Another thing we can do with a <strong>node reference</strong> is to <strong>make code run when things happen to it</strong>.</p>
+<p>The API for this is simple:</p>
+<pre><code class="lang-javascript">node.addEventListener(<span class="hljs-string">"nameOfEvent"</span>, functionToRun);
+</code></pre>
+<p>The function we pass in is called an <strong>event handler</strong>.</p>
+</div></section>
+<section class="slide" data-pos="3-7-2">
+<span class="pos">3-7-2</span>
+<div class="slidecontent"><p>Here&#39;s a <strong>simple example</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">goBoom</span>(<span class="hljs-params"></span>)</span>{
+  alert(<span class="hljs-string">"You pushed the button. BOOM goes the world!"</span>);
+}
+
+node.addEventListener(<span class="hljs-string">"click"</span>, goBoom);
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-7-3">
+<span class="pos">3-7-3</span>
+<div class="slidecontent"><p>Remember to pass in a <strong>reference</strong> to the event handler, as opposed to <strong>executing it</strong>!</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// this is wrong!</span>
+node.addEventListener(<span class="hljs-string">"click"</span>, goBoom());
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-7-4">
+<span class="pos">3-7-4</span>
+<div class="slidecontent"><p>It is quite common to <strong>define the event handler in place</strong> as an anonymous function:</p>
+<pre><code class="lang-javascript">node.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  alert(<span class="hljs-string">"You pushed the button. BOOM goes the world!"</span>);
+});
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-7-5">
+<span class="pos">3-7-5</span>
+<div class="slidecontent"><p>The event handler is called with an <strong>event object</strong>, which might be useful for some events:</p>
+<pre><code>inputFieldNode.addEventListener(<span class="hljs-string">"keyup"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span></span>{
+  <span class="hljs-keyword">if</span> (e.key === <span class="hljs-string">"Enter"</span> || e.keyCode === <span class="hljs-number">13</span>){
+    submitForm();
+  }
+});
+</code></pre></div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-8.</span> Exercise - add user rating</h3>
+      <p>Because your opinion matters</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="3-8-1">
+<span class="pos">3-8-1</span>
+<div class="slidecontent"><div class="goal"></div>
+
+<p>Goal: allow the user to rate the movie!</p>
+</div></section>
+<section class="slide list" data-pos="3-8-2">
+<span class="pos">3-8-2</span>
+<div class="slidecontent">
+<p>Here&#39;s the plan:</p>
+<ul>
+<li><span>a</span>add a row of rating stars</li>
+<li><span>b</span>make <code>changeStarRating</code> func</li>
+<li><span>c</span>add event listeners to all stars</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-8-3">
+<span class="pos">3-8-3</span>
+<div class="slidecontent">
+<p>Let&#39;s add a <strong>ratings row</strong> to the review! Here&#39;s what we want:</p>
+<p><img src="resources/images/rating.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="3-8-4">
+<span class="pos">3-8-4</span>
+<div class="slidecontent"><p>We&#39;ll make it easy for us and <strong>use an HTML entity for the star</strong>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&amp;#9733;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+<p>Our ratings row should be a <code>&lt;div&gt;</code> with 5 such stars.</p>
+</div></section>
+<section class="slide" data-pos="3-8-5">
+<span class="pos">3-8-5</span>
+<div class="slidecontent"><p>Each <strong>filled star should be black</strong>:</p>
+<pre><code class="lang-css"><span class="hljs-selector-tag">selectorForFilledStars</span> {
+  <span class="hljs-attribute">color</span>: black;
+}
+</code></pre>
+<p>...and the <strong>empty stars grey</strong>:</p>
+<pre><code class="lang-css"><span class="hljs-selector-tag">selectorForEmptyStars</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(180, 180, 180);
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-8-6">
+<span class="pos">3-8-6</span>
+<div class="slidecontent"><p>...what the <strong>selectors for filled and empty</strong> should be? Up to you! :)</p>
+<p>The easiest way is probably to <strong>add a <code>starX</code> id</strong> to each star, where <code>X</code> is the number 1-5. Then use that id to select the star as necessary.</p>
+<p>But there are <strong>many ways</strong> to solve this problem!</p>
+</div></section>
+<section class="slide num numB" data-pos="3-8-7">
+<span class="pos">3-8-7</span>
+<div class="slidecontent">
+<p>In our <code>code.js</code> file, create a <code>changeStarRating</code> func! It should take a grade between 1-5, and manipulate the DOM accordingly:</p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeStarRating</span><span class="hljs-params">(grade)</span></span>{
+  <span class="hljs-comment">// Update stars so they appear correctly according to given grade!</span>
+}
+</code></pre></div></section>
+<section class="slide" data-pos="3-8-8">
+<span class="pos">3-8-8</span>
+<div class="slidecontent"><p>To test your work, simply add a call to the bottom of <code>code.js</code>:</p>
+<pre><code>changeStarRating(<span class="hljs-number">3</span>)<span class="hljs-comment">;</span>
+</code></pre></div></section>
+<section class="slide num numC" data-pos="3-8-9">
+<span class="pos">3-8-9</span>
+<div class="slidecontent">
+<p>Now for the interaction - <strong>allow the user to click on the stars</strong>!</p>
+<p>Clicking on the first star should trigger <code>changeStarRating(1)</code>, etc.</p>
+</div></section>
+<section class="slide" data-pos="3-8-10">
+<span class="pos">3-8-10</span>
+<div class="slidecontent"><div class="checklist"></div>
+
+<p>You are done when...</p>
+<ul>
+<li>There&#39;s a row of stars</li>
+<li>Clicking a star fills all stars to that point</li>
+</ul>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-9.</span> jQuery refresher</h3>
+      <p>What the fuzz is about</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="3-9-1">
+<span class="pos">3-9-1</span>
+<div class="slidecontent"><p>You&#39;ve likely come across <strong>jQuery</strong>, a library that <strong>makes the DOM easier</strong> to work with.</p>
+<p><img src="resources/images/jquery.png" alt=""></p>
+</div></section>
+<section class="slide list" data-pos="3-9-2">
+<span class="pos">3-9-2</span>
+<div class="slidecontent">
+<p>Let&#39;s see how some <strong>common tasks</strong> are done with jQuery:</p>
+<ul>
+<li><span>a</span>node references</li>
+<li><span>b</span>node manipulation</li>
+<li><span>c</span>node creation</li>
+<li><span>d</span>event handling</li>
+<li><span>e</span>event delegation</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-9-3">
+<span class="pos">3-9-3</span>
+<div class="slidecontent">
+<p>We <strong>get node references</strong> by passing a <strong>CSS selector</strong> to the jQuery function:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// returns a jQuery collection of all elements matching that selector</span>
+<span class="hljs-keyword">let</span> collection = jQuery(<span class="hljs-string">".someClass"</span>);
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-9-4">
+<span class="pos">3-9-4</span>
+<div class="slidecontent"><p>You&#39;ll rarely see <code>jQuery</code> being used though, instead we work with the <code>$</code> alias:</p>
+<pre><code><span class="hljs-attribute">let collection</span> = $(<span class="hljs-string">".someClass"</span>);
+</code></pre></div></section>
+<section class="slide num numB" data-pos="3-9-5">
+<span class="pos">3-9-5</span>
+<div class="slidecontent">
+<p>Here&#39;s some common <strong>manipulations</strong>:</p>
+<pre><code class="lang-javascript">collection.html(<span class="hljs-string">"&lt;strong&gt;verboten&lt;/strong&gt;"</span>);
+collection.text(<span class="hljs-string">"unavailable"</span>);
+collection.addClass(<span class="hljs-string">"hide"</span>);
+collection.attr(<span class="hljs-string">"data-ref"</span>,<span class="hljs-string">"Ek#AfZW2"</span>);
+collection.empty(); <span class="hljs-comment">// killing all children</span>
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-9-6">
+<span class="pos">3-9-6</span>
+<div class="slidecontent"><p>Note that unlike the DOM, jQuery <strong>doesn&#39;t have different methods</strong> for getting 1 or many nodes.</p>
+<p>We can manipulate the resulting collection as if it was one node, and <strong>jQuery will do the changes to all nodes</strong>.</p>
+</div></section>
+<section class="slide" data-pos="3-9-7">
+<span class="pos">3-9-7</span>
+<div class="slidecontent"><p>That means that <strong>this regular JS</strong>...</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> nodes = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">".french"</span>);
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> node <span class="hljs-keyword">in</span> nodes){
+  node.innerHTML = <span class="hljs-string">"&lt;em&gt;click to translate&lt;/em&gt;"</span>;
+}
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-9-8">
+<span class="pos">3-9-8</span>
+<div class="slidecontent"><p>...can be done like this in jQuery:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> collection = $(<span class="hljs-string">".french"</span>);
+collection.html(<span class="hljs-string">"&lt;em&gt;click to translate&lt;/em&gt;"</span>);
+</code></pre>
+<p>Commonly we skip the variable and <strong>chain</strong> instead:</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">".french"</span>).html(<span class="hljs-string">"&lt;em&gt;click to translate&lt;/em&gt;"</span>);
+</code></pre>
+</div></section>
+<section class="slide num numC" data-pos="3-9-9">
+<span class="pos">3-9-9</span>
+<div class="slidecontent">
+<p>Now to see how we <strong>create new elements</strong> with jQuery!</p>
+<p>Normally, if you <strong>pass a string</strong> to jQuery, it&#39;ll treat it as a <strong>CSS selector</strong> and collect all matching element:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> collection = $(<span class="hljs-string">".blogpost &gt; p:first-child"</span>);
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-9-10">
+<span class="pos">3-9-10</span>
+<div class="slidecontent"><p>However, if we pass in a string containing HTML code, jQuery will instead <strong>create the matching element</strong>!</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> newCollection = $(<span class="hljs-string">"&lt;span&gt;"</span>);
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-9-11">
+<span class="pos">3-9-11</span>
+<div class="slidecontent"><p>This HTML code can contain multiple elements as well as attributes:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> newCollection = $(<span class="hljs-string">`
+  &lt;div class="container"&gt;
+    &lt;h2&gt;Hello world!&lt;/h2&gt;
+    &lt;p&gt;All this was created in a multiline string sent to jQuery!&lt;/p&gt;
+  &lt;/div&gt;
+`</span>);
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-9-12">
+<span class="pos">3-9-12</span>
+<div class="slidecontent"><p>Then we can <strong>append the new node</strong>:</p>
+<pre><code class="lang-javascript">$(selectorForParent).append(newCollection);
+</code></pre>
+<p>There&#39;s also a reversed syntax:</p>
+<pre><code class="lang-javascript">newCollection.appendTo(selectorForParent);
+</code></pre>
+</div></section>
+<section class="slide" data-pos="3-9-13">
+<span class="pos">3-9-13</span>
+<div class="slidecontent"><p>Of course we could have simply used the <code>.html</code> method:</p>
+<pre><code class="lang-javascript">$(selectorForParent).html(stringWithNewHtml);
+</code></pre>
+</div></section>
+<section class="slide num numD" data-pos="3-9-14">
+<span class="pos">3-9-14</span>
+<div class="slidecontent">
+<p><strong>Event listeners</strong> are added using the <code>on</code> method:</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">"#submitbtn"</span>).on(<span class="hljs-string">"click"</span>,handleSubmission);
+</code></pre>
+<p>Although it&#39;s common to use the <strong>event-specific shorthands</strong>:</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">"#submitbtn"</span>).click(handleSubmission);
+</code></pre>
+</div></section>
+<section class="slide num numE" data-pos="3-9-15">
+<span class="pos">3-9-15</span>
+<div class="slidecontent">
+<p>jQuery also makes it very easy to do <strong>event delegation</strong>.</p>
+<p>This is a powerful pattern that lets us <strong>listen to events on many elements</strong> - which <strong>might not even exist yet</strong> - using only a <strong>single event listener</strong>!</p>
+</div></section>
+<section class="slide" data-pos="3-9-16">
+<span class="pos">3-9-16</span>
+<div class="slidecontent"><p>We accomplish this by <strong>listening for the event on an ancestor element</strong>, and then letting the event <strong>bubble</strong> up to there from the element we&#39;re actually interested in.</p>
+</div></section>
+<section class="slide" data-pos="3-9-17">
+<span class="pos">3-9-17</span>
+<div class="slidecontent"><p>Consider an app with <strong>this UI</strong>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"options"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-option-id</span>=<span class="hljs-string">"gowest"</span>&gt;</span>Go west<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-option-id</span>=<span class="hljs-string">"opendoor"</span>&gt;</span>Open the door<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-option-id</span>=<span class="hljs-string">"turnback"</span>&gt;</span>Turn back<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p>The contents of the <code>#options</code> list will change as the user clicks around.</p>
+</div></section>
+<section class="slide" data-pos="3-9-18">
+<span class="pos">3-9-18</span>
+<div class="slidecontent"><p>Instead of <strong>adding a listener everytime we create an option</strong>, we can have a <strong>single listener on the list</strong> which we <strong>filter to only handle clicks on options</strong>:</p>
+<p>In jQuery we do this by <strong>passing a filtering selector</strong> after the event name to <code>.on</code>:</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">"#options"</span>).on(<span class="hljs-string">"click"</span>, <span class="hljs-string">"li"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+  <span class="hljs-keyword">let</span> opt = $(e.target).attr(<span class="hljs-string">"data-option-id"</span>);
+  gameEngine.executeOption(opt);
+});
+</code></pre>
+</div></section>
+</section>
+<section class="chaptersection">
+  <section class="sectionheader">
+    <div>
+      <h3><span>3-10.</span> Exercise - jQuerify</h3>
+      <p>Drinking the cool-aid</p>
+</p>
+    </div>
+  </section>
+  <section class="slide" data-pos="3-10-1">
+<span class="pos">3-10-1</span>
+<div class="slidecontent"><div class="goal"></div>
+
+<p>Goal: Clean up our code by using jQuery</p>
+</div></section>
+<section class="slide list" data-pos="3-10-2">
+<span class="pos">3-10-2</span>
+<div class="slidecontent">
+<ul>
+<li><span>a</span>hook in jQuery in our app</li>
+<li><span>b</span>refactor changeStarRating</li>
+<li><span>c</span>refactor renderMovie</li>
+<li><span>d</span>refactor event listeners</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="3-10-3">
+<span class="pos">3-10-3</span>
+<div class="slidecontent">
+<p><strong>Bring jQuery into the project</strong> via a script element in <code>index.html</code> referencing the <strong>CDN version</strong>:</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://code.jquery.com/jquery-3.2.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre></div></section>
+<section class="slide" data-pos="3-10-4">
+<span class="pos">3-10-4</span>
+<div class="slidecontent"><p>Remember to place that script element <strong>before <code>code.js</code></strong>, otherwise we won&#39;t be able to use jQuery in our code!</p>
+</div></section>
+<section class="slide num numB" data-pos="3-10-5">
+<span class="pos">3-10-5</span>
+<div class="slidecontent">
+<p>With jQuery brought in, time to start using it! Start by <strong>refactoring <code>changeStarRating</code></strong>, using jQuery instead of naked DOM manipulation.</p>
+</div></section>
+<section class="slide num numC" data-pos="3-10-6">
+<span class="pos">3-10-6</span>
+<div class="slidecontent">
+<p>Next, refactor <strong><code>renderMovie</code></strong> to use jQuery instead.</p>
+</div></section>
+<section class="slide num numD" data-pos="3-10-7">
+<span class="pos">3-10-7</span>
+<div class="slidecontent">
+<p>Finally, hook up the <strong>event listeners</strong> with jQuery. The star rating is a prime candidate for some <strong>event delegation</strong>!</p>
+</div></section>
+<section class="slide" data-pos="3-10-8">
+<span class="pos">3-10-8</span>
+<div class="slidecontent"><div class="checklist"></div>
+
+<p>You are done when...</p>
+<ul>
+<li>The app looks and works the same</li>
+<li>We&#39;re using jQuery throughout</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="3-10-9">
+<span class="pos">3-10-9</span>
+<div class="slidecontent"><p>As a <strong>stretch task</strong>: Although the performance is rarely an issue, it is considered bad form to <strong>reselect the same element</strong> when we don&#39;t really have to.</p>
+<p>This can be fixed by <strong>caching selected elements</strong>.</p>
+</div></section>
+<section class="slide" data-pos="3-10-10">
+<span class="pos">3-10-10</span>
+<div class="slidecontent"><p>For example, inside <code>renderMovie</code>, we probably do something like:</p>
+<pre><code>$(<span class="hljs-string">".movietitle"</span>).<span class="hljs-keyword">text</span>(movieData.title);
+</code></pre><p>But the <code>$(&quot;.movietitle&quot;)</code> selector will return the same thing each time!</p>
+</div></section>
+<section class="slide" data-pos="3-10-11">
+<span class="pos">3-10-11</span>
+<div class="slidecontent"><p>We can therefore <strong>do all selections</strong> in the bootstrapping part...</p>
+<pre><code><span class="hljs-keyword">let</span> ui = {
+  <span class="hljs-built_in">title</span>: $(<span class="hljs-string">".movietitle"</span>),
+  <span class="hljs-comment">// rest here...</span>
+}
+</code></pre><p>...and instead use that inside the functions:</p>
+<pre><code><span class="hljs-selector-tag">ui</span><span class="hljs-selector-class">.title</span><span class="hljs-selector-class">.text</span>(<span class="hljs-selector-tag">movieData</span><span class="hljs-selector-class">.title</span>);
+</code></pre></div></section>
+</section>
+
+  </div>
+  
+</div>
+
+  </div>
+  <div id="indexes">
+    <div class="lookupindex linklist">
+  <h2>External links</h2>
+  <div class="lookuplist">
+    <div><span>1-1-2</span><span>krawaller</span><a href=http://twitter.com/krawaller>http://twitter.com/krawaller</a></div><div><span>1-5-5</span><span>NodeJS</span><a href=https://nodejs.org/en/>https://nodejs.org/en/</a></div><div><span>1-5-6</span><span>Python</span><a href=https://www.python.org/downloads/>https://www.python.org/downloads/</a></div><div><span>2-1-2</span><span>flexibility</span><a href=http://js1k.com/>http://js1k.com/</a></div><div><span>2-1-3</span><span>TypeScript</span><a href=https://www.typescriptlang.org/>https://www.typescriptlang.org/</a></div><div><span>2-2-6</span><span>here</span><a href=https://tc39.github.io/process-document/>https://tc39.github.io/process-document/</a></div><div><span>2-2-7</span><span>Stage 0 list</span><a href=https://github.com/tc39/proposals/blob/master/finished-proposals.md>https://github.com/tc39/proposals/blob/master/finished-proposals.md</a></div><div><span>2-2-7</span><span>Stage 1-3</span><a href=https://github.com/tc39/proposals>https://github.com/tc39/proposals</a></div><div><span>2-2-7</span><span>Stage 4</span><a href=https://github.com/tc39/proposals/blob/master/finished-proposals.md>https://github.com/tc39/proposals/blob/master/finished-proposals.md</a></div><div><span>2-2-9</span><span>Exploring ES2016 and ES2017</span><a href=https://leanpub.com/exploring-es2016-es2017>https://leanpub.com/exploring-es2016-es2017</a></div><div><span>2-2-9</span><span>Exploring ES6</span><a href=https://leanpub.com/exploring-es6>https://leanpub.com/exploring-es6</a></div><div><span>2-3-2</span><span>Node</span><a href=https://nodejs.org/en/>https://nodejs.org/en/</a></div><div><span>2-5-3</span><span>Browserify</span><a href=http://browserify.org/>http://browserify.org/</a></div><div><span>2-5-3</span><span>Grunt</span><a href=https://gruntjs.com/>https://gruntjs.com/</a></div><div><span>2-5-3</span><span>Gulp</span><a href=http://gulpjs.com/>http://gulpjs.com/</a></div><div><span>2-5-3</span><span>Webpack</span><a href=https://webpack.github.io/>https://webpack.github.io/</a></div><div><span>2-5-4</span><span>Babel</span><a href=https://babeljs.io/>https://babeljs.io/</a></div><div><span>3-1-6</span><span>MDN rating docs</span><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors>https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors</a></div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+</body>
+</html>
