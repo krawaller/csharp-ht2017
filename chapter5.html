@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Deployment</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="icon" type="image/x-icon" href="mc2/images/favicon.ico">
+
+    <link rel="stylesheet" href="mc2/styles/reveal.css">
+    <link rel="stylesheet" href="mc2/styles/theme.css" id="theme">
+    <link rel="stylesheet" href="mc2/styles/code.css">
+    <!--STARTCOURSESPECIFICSTYLES--><link rel="stylesheet" href="styles/stuff.css"><!--ENDCOURSESPECIFICSTYLES-->
+  </head>
+
+  <body>
+    <div id="pos"></div>
+    <div class="reveal">
+      <div class="slides">
+        <section class="slide chaptertitle">
+          <div class="slidecontent">
+            <div class="chapternumber"> chapter 5 of 6 </div>
+            <h1>Deployment</h1>
+            <span>Upping the ante</p>
+</span>
+          </div>
+        </section>
+        
+        <!--STARTSECTIONINDEX--><section class="slide sectionlist">
+  <div class="slidecontent">
+    <h3>Sections in this chapter</h3>
+    <ol>
+    <li><a href="#/NaN">Netlify</a></li><li><a href="#/NaN">Exercise&nbsp;&#8209;&nbsp;Netlify</a></li>
+    </ol>
+  </div>
+</section>
+<!--ENDSECTIONINDEX-->
+        <!--STARTCHAPTERCONTENT--><!--STARTSECTION1--><section>
+  <section class="slide sectiontitle">
+    <div class="slidecontent">
+      <div class='sectioncount'>Section 1/2</div>
+      <h3>Netlify</h3>
+      
+    </div>
+  </section>
+  <section class="slide" data-pos="5-1-1">
+<span class="pos">5-1-1</span>
+<div class="slidecontent"><p>Meet your new best friend!</p>
+<p><img src="resources/images/netlify.jpg" alt=""></p>
+</div></section>
+<section class="slide" data-pos="5-1-2">
+<span class="pos">5-1-2</span>
+<div class="slidecontent"><p><a href="https://www.netlify.com/">Netlify</a> is a <strong>hosting service</strong>. The tagline:</p>
+<blockquote>
+<p>Write frontend code. Push it. We handle the rest.</p>
+</blockquote>
+</div></section>
+<section class="slide" data-pos="5-1-3">
+<span class="pos">5-1-3</span>
+<div class="slidecontent"><p>It&#39;s not just a pure hosting service though - the beautiful thing is that it...</p>
+<ul>
+<li><strong>integrates with Github</strong></li>
+<li>can <strong>publish a subdirectory</strong></li>
+<li>knows Node and can <strong>run build scripts</strong></li>
+</ul>
+<p>...which all seems like an <strong>excellent fit</strong> for our setup!</p>
+</div></section>
+<section class="slide" data-pos="5-1-4">
+<span class="pos">5-1-4</span>
+<div class="slidecontent"><p>And we&#39;ll go fix it right now, with step-by-step instructions in the exercise!</p>
+</div></section>
+</section>
+<!--ENDSECTION1-->
+<!--STARTSECTION2--><section>
+  <section class="slide sectiontitle">
+    <div class="slidecontent">
+      <div class='sectioncount'>Section 2/2</div>
+      <h3>Exercise - Netlify</h3>
+      
+    </div>
+  </section>
+  <section class="slide" data-pos="5-2-1">
+<span class="pos">5-2-1</span>
+<div class="slidecontent"><div class="goal"></div>
+
+<p>Goal: Autopublish our app online</p>
+</div></section>
+<section class="slide list" data-pos="5-2-2">
+<span class="pos">5-2-2</span>
+<div class="slidecontent">
+<ul>
+<li><span>a</span>sign up on Netlify</li>
+<li><span>b</span>connect your repo</li>
+<li><span>c</span>configure the build</li>
+<li><span>d</span>configure the site</li>
+</ul>
+</div></section>
+<section class="slide num numA" data-pos="5-2-3">
+<span class="pos">5-2-3</span>
+<div class="slidecontent">
+<p>Go to <a href="https://app.netlify.com/signup">https://app.netlify.com/signup</a>, and choose to sign up with your <strong>Github credentials</strong>.</p>
+<p>This will allow Netlify to connect to your repos.</p>
+</div></section>
+<section class="slide num numB" data-pos="5-2-4">
+<span class="pos">5-2-4</span>
+<div class="slidecontent">
+<p>Once logged in, click <strong>New site from Git</strong>:</p>
+<p><img src="resources/images/newnetlify.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="5-2-5">
+<span class="pos">5-2-5</span>
+<div class="slidecontent"><p>On the next screen, select <strong>Github</strong>:</p>
+<p><img src="resources/images/newnetlifygithub.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="5-2-6">
+<span class="pos">5-2-6</span>
+<div class="slidecontent"><p>Next you&#39;ll have to <strong>find the correct repo</strong> among a list of all your repos. If you have many, use the search field to the right.</p>
+<p><img src="resources/images/newnetlifyfindrepo.png" alt=""></p>
+<p>Once you find it, click it!</p>
+</div></section>
+<section class="slide num numC" data-pos="5-2-7">
+<span class="pos">5-2-7</span>
+<div class="slidecontent">
+<p>We must now tell Netlify <strong>which folder to publish</strong> and <strong>what command to run</strong>:</p>
+<p><img src="resources/images/newnetlifyconfig.png" alt=""></p>
+<p>We can also specify a <strong>branch</strong> and <strong>advanced options</strong>, but we won&#39;t need either.</p>
+</div></section>
+<section class="slide num numD" data-pos="5-2-8">
+<span class="pos">5-2-8</span>
+<div class="slidecontent">
+<p>Your new app will get a <strong>random name</strong> - let&#39;s fix that! Go to the <strong>Settings tab</strong>:</p>
+<p><img src="resources/images/newnetlifysettings.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="5-2-9">
+<span class="pos">5-2-9</span>
+<div class="slidecontent"><p>On that screen, in the <strong>Site information</strong> section, hit <strong>Change site name</strong>:</p>
+<p><img src="resources/images/newnetlifynewname.png" alt=""></p>
+</div></section>
+<section class="slide" data-pos="5-2-10">
+<span class="pos">5-2-10</span>
+<div class="slidecontent"><p>Now for the magic - if you change your name to <code>myawesomereviewsite</code>, then...</p>
+<ul>
+<li>your site is visitable at <strong><code>http://myawesomereviewsite.netlify.com</code></strong></li>
+<li>it <strong>updates whenever you push to Github</strong>!</li>
+</ul>
+</div></section>
+<section class="slide" data-pos="5-2-11">
+<span class="pos">5-2-11</span>
+<div class="slidecontent"><div class="checklist"></div>
+
+<p>You are done when...</p>
+<ul>
+<li>The app is visitable online</li>
+<li>Pushing to <code>master</code> updates the app</li>
+</ul>
+</div></section>
+</section>
+<!--ENDSECTION2--><!--ENDCHAPTERCONTENT-->
+        
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var basehref = window.location.href.replace(/chapter\d.*?$/,'')
+
+      document.addEventListener("keydown",function(e){
+        var code = e.which || e.keyCode;
+        if (code===13){
+          window.location.href = basehref+"index.html?from="+(5-1);
+        } else if (code >= 49 && code <= 2+48) {
+          window.location.hash = "#/" + (code-48+1+0);
+        }
+        if (5 < 6) {
+          if (code===99){ // the letter C for next Chapter
+            window.location.href = basehref+"chapter"+(5+1)+".html"
+          }
+        }
+      });
+    </script>
+    <script src="mc2/scripts/head.js" type="text/javascript"></script>
+    <script src="mc2/scripts/reveal.js" type="text/javascript"></script>
+    <script src="mc2/scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    showNotes: false,
+    transition: 'slide',
+    dependencies: [
+      { src: 'mc2/scripts/plugin/notes/notes.js', async: true }
+    ]
+  })
+
+    window.onload = function(){
+
+      var links = document.querySelectorAll("a.link");
+      for(var i=0;i<links.length;i++){
+        var link = links[i];
+        link.innerHTML = link.innerHTML.replace(/ /g,'&nbsp;')
+      }
+      var posElem = document.getElementById('pos')
+      function updateReference(){
+        setTimeout(function(){
+          var currentpos = document.querySelector('section.present[data-pos]')
+          if (currentpos){
+            posElem.innerHTML = currentpos.getAttribute('data-pos')
+          } else {
+            posElem.innerHTML = ''
+          }
+          if (document.querySelector('.present.chaptertitle')){
+            document.body.classList.add('atchaptertitle');
+          } else {
+            document.body.classList.remove('atchaptertitle');
+          }
+        },10)
+      }
+
+      window.addEventListener("hashchange",updateReference);
+
+      updateReference();
+    };
+
+    </script>
+    <!--STARTCOURSESPECIFICSCRIPTS--><!--ENDCOURSESPECIFICSCRIPTS-->
+  </body>
+</html>
