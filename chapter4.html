@@ -529,11 +529,9 @@ renderMovie(<span class="hljs-name">movieData</span>)<span class="hljs-comment">
 <section class="slide" data-pos="4-5-8">
 <span class="pos">4-5-8</span>
 <div class="slidecontent"><p>Note that there is also an <strong>ES6 version</strong> of the module syntax. In <strong><code>data.js</code></strong> we&#39;d <strong>export</strong> it like so...</p>
-<pre><code><span class="hljs-keyword">const</span> movieData = {
+<pre><code><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> movieData = {
   title: <span class="hljs-string">'Inception'</span>, <span class="hljs-comment">// etc</span>
 };
-
-<span class="hljs-keyword">export</span> movieData;
 </code></pre><p>...and then in <code>code.js</code> we&#39;d <strong>import</strong> like this:</p>
 <pre><code><span class="hljs-keyword">import</span> {movieData} <span class="hljs-keyword">from</span> <span class="hljs-string">'./data'</span>;
 
